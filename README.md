@@ -14,8 +14,8 @@ Para demonstrar evolução técnica, escalabilidade e governança, todos os proj
 
 | Projeto | Nível | Escopo Técnico Principal | Status |
 |---|---|---|---|
-| 🚀 [Projeto 1: Triagem Inicial](https://github.com/Maximo-junior/amazon-connect-portfolio/blob/main/projeto-1-triagem-ares) | Básico | Contact Flows, lógica de URA/IVR, prompts, menus e tratamento de erros | **Em Desenvolvimento** |
-| ⏳ Projeto 2: Expansão de Atendimento | Básico + | Queues, Routing Profiles, Hours of Operation, agentes e transbordo | *Planejado* |
+| 🚀 [Projeto 1: Triagem Inicial](https://github.com/Maximo-junior/amazon-connect-portfolio/blob/main/projeto-1-triagem-ares) | Básico | Contact Flows, lógica de URA/IVR, prompts, menus e tratamento de erros | **Concluído**  |
+| ⏳ Projeto 2: Expansão de Atendimento | Básico + | Queues, Routing Profiles, Hours of Operation, agentes e transbordo | **Em Desenvolvimento** |
 | ⏳ Projeto 3: Pronto Atendimento Ares | Intermediário | Contact Attributes, contexto de contato, segmentação e roteamento contextual | *Planejado* |
 | ⏳ Projeto 4: Hospital Ares | Intermediário Avançado | Flow Modules, reutilização de componentes e arquitetura multi-departamental | *Planejado* |
 | ⏳ Projeto 5: Ares Inteligente | Avançado | Autosserviço, integrações e simulação arquitetural com Lex, Lambda, APIs e Analytics | *Planejado* |
