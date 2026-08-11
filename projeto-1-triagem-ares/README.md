@@ -94,18 +94,21 @@ No início do fluxo é criado o atributo `Tentativas = 0`, funcionando como um c
 ### 2. Entrada Inválida & Timeout
 Caso o cliente digite qualquer opção diferente de `1`, `2` ou `3`, ou caso nenhuma entrada seja recebida durante os 5 segundos configurados, o evento é tratado da seguinte forma:
 
+```
 Entrada Inválida / Timeout
-            ↓
-  AR_PR_Opcao_Invalida
-            ↓
-  Incrementa Tentativas
-            ↓
-    Verifica Limite
+           ↓
+ AR_PR_Opcao_Invalida
+           ↓
+ Incrementa Tentativas
+           ↓
+     Verifica Limite
+```
 
 
 
 
-[ INÍCIO ]
+```
+                [ INÍCIO ]
                     │
                     ▼
       ┌─────────────────────────────┐
@@ -151,7 +154,6 @@ Entrada Inválida / Timeout
   │                  ▼
   │             [ DISCONNECT ]
   │
-  │
   │    [ Opção Inválida / Timeout ]
   │                  │
   │                  ▼
@@ -170,3 +172,4 @@ Entrada Inválida / Timeout
                              │
                              ▼
                         [ DISCONNECT ]
+```
