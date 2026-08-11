@@ -1,63 +1,120 @@
-
-# Projeto 1: URA de Triagem Inicial – Clínica Ares 🏥
+# 🏥 Projeto 1 — URA de Triagem Inicial | Clínica Ares
 
 ## 📋 Visão Geral
 
-Este projeto consiste no desenho, arquitetura e implementação de uma URA (Unidade de Resposta Audível) de triagem inicial para a **Clínica Ares**, um grupo médico fictício em expansão.
+Este projeto contempla o desenho, arquitetura, implementação e validação de uma URA (Unidade de Resposta Audível) de Triagem Inicial para a **Clínica Ares**, um grupo médico fictício utilizado como cenário para o desenvolvimento de um ecossistema de Contact Center no Amazon Connect.
 
-O foco principal é estruturar o primeiro contato do cliente, simplificando a identificação do setor desejado e aplicando regras de tratamento de falhas para evitar repetições indefinidas no fluxo.
-
----
-
-## 💼 Contexto de Negócio
-
-A Clínica Ares identificou a necessidade de melhorar sua etapa inicial de atendimento, reduzindo problemas relacionados a menus complexos, opções digitadas incorretamente e ausência de interação por parte do cliente.
-
-A solução propõe um menu de triagem simples, com três opções:
+A solução representa a primeira camada de atendimento receptivo, responsável por identificar o setor desejado pelo paciente e direcionar logicamente a chamada entre:
 
 - **1 — Consultas**
 - **2 — Exames**
 - **3 — Financeiro**
 
-Neste primeiro projeto, os departamentos ainda não possuem filas reais de atendimento. Cada opção será representada por um destino simulado, permitindo concentrar o desenvolvimento nos fundamentos de lógica da URA e tratamento de exceções.
+Além da navegação DTMF, o projeto implementa um circuito defensivo anti-loop, responsável pelo tratamento de entradas inválidas e ausência de resposta (Timeout), evitando que o cliente permaneça indefinidamente dentro da URA.
+
+> 💰 **Premissa FinOps:** O laboratório foi desenvolvido priorizando custo real de **R$ 0,00**, simulando componentes que exigiriam recursos adicionais ou telefonia pública.
 
 ---
 
-## 🛠️ Detalhes de Arquitetura e Fluxo
+## 🎯 Problema de Negócio
 
-### 1. Governança de Nomenclatura (Naming Conventions)
+A Clínica Ares identificou a necessidade de melhorar sua etapa inicial de atendimento, reduzindo problemas relacionados a:
 
-Para manter um padrão de organização, todos os recursos utilizam o prefixo `AR` (Ares), seguido pelo tipo de recurso e sua função:
+- Menus complexos;
+- Direcionamento incorreto de chamadas;
+- Opções digitadas incorretamente;
+- Ausência de interação do cliente;
+- Repetições indefinidas dentro da URA;
+- Consumo desnecessário de recursos.
+
+Como solução, foi criada uma URA simples e objetiva, permitindo que o paciente escolha diretamente o setor desejado.
+
+Neste primeiro projeto, os departamentos ainda não possuem filas reais de atendimento. Os destinos de Consultas, Exames e Financeiro são representados por prompts e caminhos simulados, permitindo concentrar o desenvolvimento nos fundamentos do Amazon Connect, na lógica da URA, no controle de estado e no tratamento de exceções.
+
+---
+
+## 🏛️ Arquitetura da Solução
+
+### Componentes Principais
+
+| Componente | Implementação |
+| :--- | :--- |
+| **Contact Flow** | `AR_CF_Triagem_Inicial` |
+| **Síntese de Voz** | Amazon Polly (Voz Vitória - pt-BR) |
+| **Entrada do Cliente** | DTMF (Opções 1, 2 e 3) |
+| **Timeout** | 5 segundos |
+| **Controle de Estado** | User Defined Attribute (`Tentativas`) |
+| **Tratamento de Falhas** | Circuito defensivo anti-loop (Limite: 2 falhas) |
+| **Destinos** | Simulados via TTS |
+| **Telefonia Pública** | Não provisionada (FinOps R$ 0,00) |
+
+---
+
+## 🏷️ Governança de Nomenclatura
+
+Para manter organização, padronização e facilitar a evolução futura do ambiente, os recursos seguem uma convenção de nomenclatura utilizando o prefixo `AR`, referente ao ecossistema Ares.
 
 - **Contact Flow:** `AR_CF_Triagem_Inicial`
-- **Prompts (TTS):**
-  - `AR_PR_Saudacao` — Boas-vindas
-  - `AR_PR_Menu_Principal` — Opções de atendimento
-  - `AR_PR_Opcao_Invalida` — Tratamento de opção inválida
-  - `AR_PR_Encerramento` — Mensagem de encerramento
+- **Prompts / TTS:**
+  - `AR_PR_Saudacao`
+  - `AR_PR_Menu_Principal`
+  - `AR_PR_Opcao_Invalida`
+  - `AR_PR_Encerramento`
 
-### 2. Circuito Defensivo (UX/CX Base)
+| Recurso | Finalidade |
+| :--- | :--- |
+| `AR_PR_Saudacao` | Mensagem inicial de boas-vindas |
+| `AR_PR_Menu_Principal` | Apresentação das opções Consultas, Exames e Financeiro |
+| `AR_PR_Opcao_Invalida` | Tratamento de entrada inválida ou ausência de resposta |
+| `AR_PR_Encerramento` | Mensagem executada antes da finalização do contato |
 
-Para tratar falhas de digitação ou ausência de interação, o fluxo possui regras de tratamento de exceções:
-
-- **Opção Inválida:** caso o cliente digite uma opção diferente de `1`, `2` ou `3`.
-- **Timeout:** caso o cliente não forneça nenhuma entrada dentro do tempo configurado.
-- **Controle de Tentativas:** o cliente terá até duas tentativas para fornecer uma opção válida. Caso o limite seja atingido, o fluxo executará a mensagem `AR_PR_Encerramento` e finalizará o contato.
-
-O objetivo é impedir que o cliente permaneça preso em um loop infinito dentro da URA.
+Essa estrutura cria uma base de governança que poderá ser reutilizada nos próximos projetos do Ecossistema Ares Saúde.
 
 ---
 
-## 📐 Fluxograma da Solução
+## ☎️ Menu Principal — DTMF
 
-O desenho lógico da URA segue a estrutura abaixo:
+O menu principal utiliza entrada via teclado numérico (DTMF) para identificar o setor desejado pelo paciente:
 
-```text
-                [ INÍCIO ]
+- **Digite 1** → Consultas
+- **Digite 2** → Exames
+- **Digite 3** → Financeiro
+
+O sistema aguarda a interação durante **5 segundos**. Uma entrada válida direciona o contato para o respectivo destino lógico. Como este projeto não utiliza filas reais, cada setor possui uma confirmação simulada antes do encerramento do contato.
+
+---
+
+## 🛡️ Circuito Defensivo Anti-Loop
+
+Um dos principais objetivos técnicos deste projeto é impedir que uma chamada permaneça presa indefinidamente dentro da URA. Para isso, foi implementado um controle de tentativas utilizando atributos de contato.
+
+### 1. Inicialização
+No início do fluxo é criado o atributo `Tentativas = 0`, funcionando como um controle de estado durante a execução do contato.
+
+### 2. Entrada Inválida & Timeout
+Caso o cliente digite qualquer opção diferente de `1`, `2` ou `3`, ou caso nenhuma entrada seja recebida durante os 5 segundos configurados, o evento é tratado da seguinte forma:
+
+Entrada Inválida / Timeout
+            ↓
+  AR_PR_Opcao_Invalida
+            ↓
+  Incrementa Tentativas
+            ↓
+    Verifica Limite
+
+
+
+
+[ INÍCIO ]
                     │
                     ▼
       ┌─────────────────────────────┐
       │ AR_CF_Triagem_Inicial       │
+      └──────────────┬──────────────┘
+                     │
+                     ▼
+      ┌─────────────────────────────┐
+      │ Tentativas = 0              │
       └──────────────┬──────────────┘
                      │
                      ▼
@@ -101,9 +158,10 @@ O desenho lógico da URA segue a estrutura abaixo:
   │       AR_PR_Opcao_Invalida
   │                  │
   │                  ▼
-  │       [ Controle de Tentativas ]
+  │         Tentativas + 1
   │                  │
-  │            Tentativa < 2?
+  │                  ▼
+  │           Tentativas < 2?
   │             /          \
   │           SIM          NÃO
   │            │             │
@@ -112,22 +170,3 @@ O desenho lógico da URA segue a estrutura abaixo:
                              │
                              ▼
                         [ DISCONNECT ]
-````
-
----
-
-## 🪙 Abordagem FinOps (Custo Zero)
-
-Este projeto foi estruturado com a premissa de não gerar intencionalmente custos durante o laboratório.
-
-Para isso:
-
-* **Telefonia Pública não provisionada:** nenhum número real DID ou Toll-Free será utilizado no projeto.
-* **Destinos simulados:** Consultas, Exames e Financeiro serão representados logicamente, sem utilização de filas ou atendimento real.
-* **Sem integrações externas:** Amazon Lex, AWS Lambda, APIs externas e outros serviços adicionais não fazem parte deste projeto.
-* **Simulação e documentação:** componentes que poderiam exigir recursos tarifados serão representados através da arquitetura e da documentação técnica.
-
-O foco deste primeiro projeto é exclusivamente o aprendizado e implementação da lógica básica de uma URA no Amazon Connect.
-
-```
-```

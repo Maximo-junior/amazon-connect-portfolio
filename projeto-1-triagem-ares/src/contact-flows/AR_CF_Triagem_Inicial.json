@@ -1,0 +1,370 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "9efdd89d-b7ee-4816-af96-e7ff1f8c3127",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 12,
+      "y": 39.2
+    },
+    "ActionMetadata": {
+      "cef1d1ff-1c08-44b0-b4a1-93aeeb1a9e37": {
+        "position": {
+          "x": 315.2,
+          "y": 6.4
+        }
+      },
+      "63129546-11b4-4205-b88f-f42b38f3e8e4": {
+        "position": {
+          "x": 528.8,
+          "y": 6.4
+        },
+        "dynamicParams": []
+      },
+      "bee26d47-772e-450a-86bc-1abe0a4c5297": {
+        "position": {
+          "x": 1310.4,
+          "y": -137.6
+        }
+      },
+      "4776db32-de1e-4ee6-a6c2-98df0c157222": {
+        "position": {
+          "x": 1373.6,
+          "y": 126.4
+        }
+      },
+      "954ec28a-2485-4208-b0a4-158d36105040": {
+        "position": {
+          "x": 1284,
+          "y": 383.2
+        }
+      },
+      "949777e4-ad0f-46da-a37b-e8a452a15cb4": {
+        "position": {
+          "x": 1822.4,
+          "y": 376.8
+        }
+      },
+      "7d6b7b3a-956e-476e-825a-41b56a25db9a": {
+        "position": {
+          "x": 656.8,
+          "y": 850.4
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "2842db79-cbba-4049-9432-e7b99e8de366",
+            "operator": {
+              "name": "Is less than",
+              "value": "LessThan",
+              "shortDisplay": "<"
+            },
+            "value": "2"
+          }
+        ]
+      },
+      "a0ba4576-020d-4006-a5b2-dc8d65035fe0": {
+        "position": {
+          "x": 1542.4,
+          "y": 819.2
+        }
+      },
+      "9efdd89d-b7ee-4816-af96-e7ff1f8c3127": {
+        "position": {
+          "x": 108,
+          "y": 9.6
+        },
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "pt-BR"
+          }
+        },
+        "overrideConsoleVoice": false
+      },
+      "e4828bf3-30f7-4dd8-b511-3e87c61b1351": {
+        "position": {
+          "x": 1209.6,
+          "y": 576.8
+        },
+        "dynamicParams": []
+      },
+      "548e5e43-770f-4aa1-9405-235d6b86c884": {
+        "position": {
+          "x": 881.6,
+          "y": -39.2
+        },
+        "conditionMetadata": [
+          {
+            "id": "54b81e6e-88ab-46c0-bf31-2cb95b494435",
+            "value": "1"
+          },
+          {
+            "id": "dad9c0f4-9417-4f5b-b246-1749cffd81f1",
+            "value": "2"
+          },
+          {
+            "id": "5cb151ed-b507-462a-938f-67efce50c648",
+            "value": "3"
+          }
+        ]
+      },
+      "8694c607-61e3-42a3-a5ca-e3b1d6046d83": {
+        "position": {
+          "x": 936.8,
+          "y": 590.4
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "AR_CF_Triagem_Inicial",
+    "description": "URA de Triagem Inicial da Clínica Ares - Projeto 1",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Bem-vindo à Clínica Ares. Obrigado por entrar em contato."
+      },
+      "Identifier": "cef1d1ff-1c08-44b0-b4a1-93aeeb1a9e37",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "63129546-11b4-4205-b88f-f42b38f3e8e4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "Tentativas": "0"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "63129546-11b4-4205-b88f-f42b38f3e8e4",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "548e5e43-770f-4aa1-9405-235d6b86c884",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Você selecionou o setor de Consultas. Encaminhando seu atendimento."
+      },
+      "Identifier": "bee26d47-772e-450a-86bc-1abe0a4c5297",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Você selecionou o setor de Exames. Encaminhando seu atendimento."
+      },
+      "Identifier": "4776db32-de1e-4ee6-a6c2-98df0c157222",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Você selecionou o setor Financeiro. Encaminhando seu atendimento."
+      },
+      "Identifier": "954ec28a-2485-4208-b0a4-158d36105040",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.Tentativas"
+      },
+      "Identifier": "7d6b7b3a-956e-476e-825a-41b56a25db9a",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+        "Conditions": [
+          {
+            "NextAction": "548e5e43-770f-4aa1-9405-235d6b86c884",
+            "Condition": {
+              "Operator": "NumberLessThan",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Número de tentativas excedido. O atendimento será encerrado. Obrigado."
+      },
+      "Identifier": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Vitoria"
+      },
+      "Identifier": "9efdd89d-b7ee-4816-af96-e7ff1f8c3127",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "cef1d1ff-1c08-44b0-b4a1-93aeeb1a9e37",
+        "Errors": [
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "Tentativas": "1"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "e4828bf3-30f7-4dd8-b511-3e87c61b1351",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "7d6b7b3a-956e-476e-825a-41b56a25db9a",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Para Consultas, digite 1. Para Exames, digite 2. Para Financeiro, digite 3."
+      },
+      "Identifier": "548e5e43-770f-4aa1-9405-235d6b86c884",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+        "Conditions": [
+          {
+            "NextAction": "bee26d47-772e-450a-86bc-1abe0a4c5297",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "4776db32-de1e-4ee6-a6c2-98df0c157222",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          },
+          {
+            "NextAction": "954ec28a-2485-4208-b0a4-158d36105040",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "3"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Opção inválida ou tempo de resposta esgotado."
+      },
+      "Identifier": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "e4828bf3-30f7-4dd8-b511-3e87c61b1351",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
