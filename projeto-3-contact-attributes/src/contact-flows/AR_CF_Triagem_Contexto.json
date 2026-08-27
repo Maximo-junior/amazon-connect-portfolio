@@ -1,0 +1,780 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "45ba092a-1ca2-428f-b9f4-1862df59cfe2",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -380,
+      "y": -487.2
+    },
+    "ActionMetadata": {
+      "e253ee3c-8051-46a6-9e5b-3a4d3fd7e9b5": {
+        "position": {
+          "x": 970.4,
+          "y": -413.6
+        },
+        "parameters": {
+          "HoursOfOperationId": {
+            "displayName": "AR_HO_Clinica"
+          }
+        },
+        "Hours": {
+          "id": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/operating-hours/aeba90aa-16f8-4b49-b399-1482e4f9bb60",
+          "text": "AR_HO_Clinica"
+        }
+      },
+      "45ba092a-1ca2-428f-b9f4-1862df59cfe2": {
+        "position": {
+          "x": -228,
+          "y": -450.4
+        }
+      },
+      "4efd35ff-3b89-4ad9-a387-a10cefb27d2c": {
+        "position": {
+          "x": 1300.8,
+          "y": -458.4
+        }
+      },
+      "63129546-11b4-4205-b88f-f42b38f3e8e4": {
+        "position": {
+          "x": 742.4,
+          "y": -419.2
+        },
+        "dynamicParams": []
+      },
+      "cef1d1ff-1c08-44b0-b4a1-93aeeb1a9e37": {
+        "position": {
+          "x": 239.2,
+          "y": -457.6
+        }
+      },
+      "c4ae90bc-4231-4a04-a552-e46c1d95b57d": {
+        "position": {
+          "x": 1953.6,
+          "y": 196
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "AR_Q_Financeiro"
+          }
+        },
+        "queue": {
+          "text": "AR_Q_Financeiro"
+        }
+      },
+      "dcb8e3e7-b720-49fa-a6ff-178e43d06c20": {
+        "position": {
+          "x": 1946.4,
+          "y": -181.6
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "AR_Q_Consultas"
+          }
+        },
+        "queue": {
+          "text": "AR_Q_Consultas"
+        }
+      },
+      "9a1fbded-d7a0-4e41-b3cd-a63a7c85af5e": {
+        "position": {
+          "x": 2396,
+          "y": 9.6
+        }
+      },
+      "96e73391-5959-4bce-ba42-ff4b0cb4433d": {
+        "position": {
+          "x": 1958.4,
+          "y": 8
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "AR_Q_Exames"
+          }
+        },
+        "queue": {
+          "text": "AR_Q_Exames"
+        }
+      },
+      "7d6b7b3a-956e-476e-825a-41b56a25db9a": {
+        "position": {
+          "x": 454.4,
+          "y": 831.2
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "01f5914f-9fff-4ae8-960b-055841a3ed1a",
+            "operator": {
+              "name": "Is less than",
+              "value": "LessThan",
+              "shortDisplay": "<"
+            },
+            "value": "2"
+          }
+        ]
+      },
+      "e3663639-420b-4b52-8a7d-67d226362fe3": {
+        "position": {
+          "x": 895.2,
+          "y": -168.8
+        },
+        "dynamicParams": []
+      },
+      "b5014c57-14e8-49ea-84e8-89badb8f8cb7": {
+        "position": {
+          "x": 913.6,
+          "y": 25.6
+        },
+        "dynamicParams": []
+      },
+      "22f2bae2-8250-4e7f-b28f-b00a368a6c56": {
+        "position": {
+          "x": 922.4,
+          "y": 224.8
+        },
+        "dynamicParams": []
+      },
+      "9ac237c2-c7f9-4575-a664-9dcdfca2bd3e": {
+        "position": {
+          "x": 1412,
+          "y": -149.6
+        },
+        "dynamicParams": []
+      },
+      "f9232638-04a4-49b9-80d9-30a91eadf7e0": {
+        "position": {
+          "x": 1660,
+          "y": -88.8
+        },
+        "conditionMetadata": [
+          {
+            "id": "817a3364-6ada-4247-96ff-0e494f14aa6b",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Consulta"
+          },
+          {
+            "id": "562e4a0f-c345-4fdf-8fce-dd3d8ccaade1",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Exame"
+          },
+          {
+            "id": "8607aa9a-dfd5-477c-8df1-6869ad3ca709",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Financeiro"
+          }
+        ]
+      },
+      "a0ba4576-020d-4006-a5b2-dc8d65035fe0": {
+        "position": {
+          "x": 1986.4,
+          "y": 534.4
+        }
+      },
+      "95c5803e-197b-43ad-bae1-88956d14409a": {
+        "position": {
+          "x": 1442.4,
+          "y": 52.8
+        },
+        "dynamicParams": []
+      },
+      "9efdd89d-b7ee-4816-af96-e7ff1f8c3127": {
+        "position": {
+          "x": 16.8,
+          "y": -380
+        },
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "pt-BR"
+          }
+        },
+        "overrideConsoleVoice": false
+      },
+      "548e5e43-770f-4aa1-9405-235d6b86c884": {
+        "position": {
+          "x": 683.2,
+          "y": -109.6
+        },
+        "conditionMetadata": [
+          {
+            "id": "c2b962d7-ee82-4d8d-a06f-901454351e00",
+            "value": "1"
+          },
+          {
+            "id": "138ca5bb-e763-431a-8ed9-d6762dd21fd2",
+            "value": "2"
+          },
+          {
+            "id": "f98b86b4-ca4c-4846-85ce-c5a7006c588b",
+            "value": "3"
+          }
+        ]
+      },
+      "949777e4-ad0f-46da-a37b-e8a452a15cb4": {
+        "position": {
+          "x": 2684.8,
+          "y": -213.6
+        }
+      },
+      "e4828bf3-30f7-4dd8-b511-3e87c61b1351": {
+        "position": {
+          "x": 1286.4,
+          "y": 432.8
+        },
+        "dynamicParams": []
+      },
+      "f8182413-d878-46e0-b835-5425a2e753d2": {
+        "position": {
+          "x": 1170.4,
+          "y": -105.6
+        },
+        "conditionMetadata": [
+          {
+            "id": "61c8e971-39c3-467e-bac1-17cffeaed332",
+            "value": "1"
+          },
+          {
+            "id": "aff62fb5-f0f4-4d0a-bc07-4e52af8197f8",
+            "value": "2"
+          }
+        ]
+      },
+      "8694c607-61e3-42a3-a5ca-e3b1d6046d83": {
+        "position": {
+          "x": 788.8,
+          "y": 536
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "AR_CF_Triagem_Contexto",
+    "description": "Projeto 3 - Triagem com Contact Attributes, Contexto e Observabilidade CloudWatch Ares Saude",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "HoursOfOperationId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/operating-hours/aeba90aa-16f8-4b49-b399-1482e4f9bb60"
+      },
+      "Identifier": "e253ee3c-8051-46a6-9e5b-3a4d3fd7e9b5",
+      "Type": "CheckHoursOfOperation",
+      "Transitions": {
+        "NextAction": "4efd35ff-3b89-4ad9-a387-a10cefb27d2c",
+        "Conditions": [
+          {
+            "NextAction": "cef1d1ff-1c08-44b0-b4a1-93aeeb1a9e37",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "4efd35ff-3b89-4ad9-a387-a10cefb27d2c",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "4efd35ff-3b89-4ad9-a387-a10cefb27d2c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "45ba092a-1ca2-428f-b9f4-1862df59cfe2",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "9efdd89d-b7ee-4816-af96-e7ff1f8c3127"
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Nosso horário de atendimento é de segunda a sexta-feira, das 8h às 18h. No momento estamos fechados. Obrigado por ligar para a Clínica Ares"
+      },
+      "Identifier": "4efd35ff-3b89-4ad9-a387-a10cefb27d2c",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "Tentativas": "0"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "63129546-11b4-4205-b88f-f42b38f3e8e4",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "e253ee3c-8051-46a6-9e5b-3a4d3fd7e9b5",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Bem-vindo à Clínica Ares. Obrigado por entrar em contato."
+      },
+      "Identifier": "cef1d1ff-1c08-44b0-b4a1-93aeeb1a9e37",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "548e5e43-770f-4aa1-9405-235d6b86c884",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/queue/80d60602-e184-4055-9707-913648303104"
+      },
+      "Identifier": "c4ae90bc-4231-4a04-a552-e46c1d95b57d",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "9a1fbded-d7a0-4e41-b3cd-a63a7c85af5e",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/queue/c2c18098-b4b9-43e8-8371-c4a7181bfc9c"
+      },
+      "Identifier": "dcb8e3e7-b720-49fa-a6ff-178e43d06c20",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "9a1fbded-d7a0-4e41-b3cd-a63a7c85af5e",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "9a1fbded-d7a0-4e41-b3cd-a63a7c85af5e",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/queue/c5482fb3-4a14-4ad7-b6f1-26f0fcce38ed"
+      },
+      "Identifier": "96e73391-5959-4bce-ba42-ff4b0cb4433d",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "9a1fbded-d7a0-4e41-b3cd-a63a7c85af5e",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.Tentativas"
+      },
+      "Identifier": "7d6b7b3a-956e-476e-825a-41b56a25db9a",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+        "Conditions": [
+          {
+            "NextAction": "548e5e43-770f-4aa1-9405-235d6b86c884",
+            "Condition": {
+              "Operator": "NumberLessThan",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "TipoAtendimento": "Consulta",
+          "CanalEntrada": "Voz_Inbound"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "e3663639-420b-4b52-8a7d-67d226362fe3",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "f8182413-d878-46e0-b835-5425a2e753d2",
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "TipoAtendimento": "Exame",
+          "CanalEntrada": "Voz_Inbound"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "b5014c57-14e8-49ea-84e8-89badb8f8cb7",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "f8182413-d878-46e0-b835-5425a2e753d2",
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "TipoAtendimento": "Financeiro",
+          "CanalEntrada": "Voz_Inbound"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "22f2bae2-8250-4e7f-b28f-b00a368a6c56",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "f8182413-d878-46e0-b835-5425a2e753d2",
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "SegmentoCliente": "Convenio"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "9ac237c2-c7f9-4575-a664-9dcdfca2bd3e",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "f9232638-04a4-49b9-80d9-30a91eadf7e0",
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.TipoAtendimento"
+      },
+      "Identifier": "f9232638-04a4-49b9-80d9-30a91eadf7e0",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+        "Conditions": [
+          {
+            "NextAction": "dcb8e3e7-b720-49fa-a6ff-178e43d06c20",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Consulta"
+              ]
+            }
+          },
+          {
+            "NextAction": "96e73391-5959-4bce-ba42-ff4b0cb4433d",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Exame"
+              ]
+            }
+          },
+          {
+            "NextAction": "c4ae90bc-4231-4a04-a552-e46c1d95b57d",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Financeiro"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Número de tentativas excedido. O atendimento será encerrado. Obrigado."
+      },
+      "Identifier": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "SegmentoCliente": "Particular"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "95c5803e-197b-43ad-bae1-88956d14409a",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "f9232638-04a4-49b9-80d9-30a91eadf7e0",
+        "Errors": [
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Vitoria"
+      },
+      "Identifier": "9efdd89d-b7ee-4816-af96-e7ff1f8c3127",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "63129546-11b4-4205-b88f-f42b38f3e8e4",
+        "Errors": [
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Para Consultas, digite 1. Para Exames, digite 2. Para Financeiro, digite 3."
+      },
+      "Identifier": "548e5e43-770f-4aa1-9405-235d6b86c884",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+        "Conditions": [
+          {
+            "NextAction": "e3663639-420b-4b52-8a7d-67d226362fe3",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "b5014c57-14e8-49ea-84e8-89badb8f8cb7",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          },
+          {
+            "NextAction": "22f2bae2-8250-4e7f-b28f-b00a368a6c56",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "3"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "Tentativas": "1"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "e4828bf3-30f7-4dd8-b511-3e87c61b1351",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "7d6b7b3a-956e-476e-825a-41b56a25db9a",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Para atendimento via convênio, digite 1. Para atendimento particular, digite 2."
+      },
+      "Identifier": "f8182413-d878-46e0-b835-5425a2e753d2",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+        "Conditions": [
+          {
+            "NextAction": "9ac237c2-c7f9-4575-a664-9dcdfca2bd3e",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "95c5803e-197b-43ad-bae1-88956d14409a",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "a0ba4576-020d-4006-a5b2-dc8d65035fe0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Opção inválida ou tempo de resposta esgotado."
+      },
+      "Identifier": "8694c607-61e3-42a3-a5ca-e3b1d6046d83",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "e4828bf3-30f7-4dd8-b511-3e87c61b1351",
+        "Errors": [
+          {
+            "NextAction": "949777e4-ad0f-46da-a37b-e8a452a15cb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
