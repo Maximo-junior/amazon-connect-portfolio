@@ -1,0 +1,134 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "81623471-b679-4628-9e9d-0213c46d998e",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "7ef3b200-d479-4a07-a4ca-c2cd1f514aa3": {
+        "position": {
+          "x": 420,
+          "y": 35.2
+        }
+      },
+      "f8cac5bc-8b4c-43e9-b573-3baa0bb66e3f": {
+        "position": {
+          "x": 704.8,
+          "y": 245.6
+        }
+      },
+      "81623471-b679-4628-9e9d-0213c46d998e": {
+        "position": {
+          "x": 156,
+          "y": 32
+        },
+        "parameters": {
+          "HoursOfOperationId": {
+            "displayName": "AR_HO_Clinica"
+          }
+        },
+        "Hours": {
+          "id": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/operating-hours/aeba90aa-16f8-4b49-b399-1482e4f9bb60",
+          "text": "AR_HO_Clinica"
+        }
+      },
+      "569fb12f-0ec9-425e-b09c-16de83861936": {
+        "position": {
+          "x": 420.8,
+          "y": 161.6
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "AR_MD_Verifica_Horario",
+    "description": "Modulo corporativo Ares Saude para validacao centralizada de horario de expediente",
+    "status": "published",
+    "settings": {},
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "7ef3b200-d479-4a07-a4ca-c2cd1f514aa3",
+      "Type": "EndFlowModuleExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "f8cac5bc-8b4c-43e9-b573-3baa0bb66e3f",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "HoursOfOperationId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/operating-hours/aeba90aa-16f8-4b49-b399-1482e4f9bb60"
+      },
+      "Identifier": "81623471-b679-4628-9e9d-0213c46d998e",
+      "Type": "CheckHoursOfOperation",
+      "Transitions": {
+        "NextAction": "569fb12f-0ec9-425e-b09c-16de83861936",
+        "Conditions": [
+          {
+            "NextAction": "7ef3b200-d479-4a07-a4ca-c2cd1f514aa3",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "569fb12f-0ec9-425e-b09c-16de83861936",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "569fb12f-0ec9-425e-b09c-16de83861936",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Agradecemos por ligar para o Hospital Ares. Nosso atendimento para este canal funciona de segunda a sexta-feira, das 8h às 18h. Por favor, retorne a ligação durante o nosso horário de funcionamento. A Ares Saúde deseja um ótimo dia"
+      },
+      "Identifier": "569fb12f-0ec9-425e-b09c-16de83861936",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "f8cac5bc-8b4c-43e9-b573-3baa0bb66e3f",
+        "Errors": [
+          {
+            "NextAction": "f8cac5bc-8b4c-43e9-b573-3baa0bb66e3f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ],
+  "Settings": {
+    "InputParameters": [],
+    "OutputParameters": [],
+    "Transitions": [
+      {
+        "DisplayName": "Success",
+        "ReferenceName": "Success",
+        "Description": ""
+      },
+      {
+        "DisplayName": "Error",
+        "ReferenceName": "Error",
+        "Description": ""
+      }
+    ]
+  }
+}

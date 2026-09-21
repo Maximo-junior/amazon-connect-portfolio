@@ -1,0 +1,177 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "ac3601b7-82c2-4711-985c-b319c0a58a7e",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "ac3601b7-82c2-4711-985c-b319c0a58a7e": {
+        "position": {
+          "x": 166.4,
+          "y": 45.6
+        }
+      },
+      "d715a1e4-cfed-4776-a34d-68a9d9e3e857": {
+        "position": {
+          "x": 893.6,
+          "y": 71.2
+        }
+      },
+      "03b5ef43-2889-4717-a65b-9b99e156d691": {
+        "position": {
+          "x": 1204.8,
+          "y": 286.4
+        }
+      },
+      "d110bfe7-24b0-416c-bb14-0ed8a62c80ac": {
+        "position": {
+          "x": 404.8,
+          "y": 43.2
+        },
+        "dynamicParams": []
+      },
+      "f280ca94-abb7-4ac7-9d42-73281bb68a86": {
+        "position": {
+          "x": 653.6,
+          "y": 24.8
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "6124150d-4282-400e-ab5c-e746ca30eafc",
+            "operator": {
+              "name": "Is less than",
+              "value": "LessThan",
+              "shortDisplay": "<"
+            },
+            "value": "2"
+          }
+        ]
+      },
+      "22277b4e-6286-4764-904a-3b608c331769": {
+        "position": {
+          "x": 908.8,
+          "y": 200
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "AR_MD_Tratamento_Erros",
+    "description": "Modulo corporativo Ares Saude para gestao unificada de retentativas e encerramento seguro",
+    "status": "published",
+    "settings": {},
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "A opção informada é inválida ou o tempo de espera foi esgotado."
+      },
+      "Identifier": "ac3601b7-82c2-4711-985c-b319c0a58a7e",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "d110bfe7-24b0-416c-bb14-0ed8a62c80ac",
+        "Errors": [
+          {
+            "NextAction": "d110bfe7-24b0-416c-bb14-0ed8a62c80ac",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "d715a1e4-cfed-4776-a34d-68a9d9e3e857",
+      "Type": "EndFlowModuleExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "03b5ef43-2889-4717-a65b-9b99e156d691",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "Tentativas": "1"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "d110bfe7-24b0-416c-bb14-0ed8a62c80ac",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "f280ca94-abb7-4ac7-9d42-73281bb68a86",
+        "Errors": [
+          {
+            "NextAction": "22277b4e-6286-4764-904a-3b608c331769",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.Tentativas"
+      },
+      "Identifier": "f280ca94-abb7-4ac7-9d42-73281bb68a86",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "22277b4e-6286-4764-904a-3b608c331769",
+        "Conditions": [
+          {
+            "NextAction": "d715a1e4-cfed-4776-a34d-68a9d9e3e857",
+            "Condition": {
+              "Operator": "NumberLessThan",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "22277b4e-6286-4764-904a-3b608c331769",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Número de tentativas excedido. Para sua segurança, a ligação será encerrada. Obrigado por contatar o Hospital Ares"
+      },
+      "Identifier": "22277b4e-6286-4764-904a-3b608c331769",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "03b5ef43-2889-4717-a65b-9b99e156d691",
+        "Errors": [
+          {
+            "NextAction": "03b5ef43-2889-4717-a65b-9b99e156d691",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ],
+  "Settings": {
+    "InputParameters": [],
+    "OutputParameters": [],
+    "Transitions": [
+      {
+        "DisplayName": "Success",
+        "ReferenceName": "Success",
+        "Description": ""
+      },
+      {
+        "DisplayName": "Error",
+        "ReferenceName": "Error",
+        "Description": ""
+      }
+    ]
+  }
+}

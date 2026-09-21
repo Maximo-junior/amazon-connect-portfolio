@@ -1,0 +1,94 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "0507315b-65e1-473c-be0d-15953b5b2ac4",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "35226338-420e-40ec-845e-56fa81e61013": {
+        "position": {
+          "x": 638.4,
+          "y": 75.2
+        }
+      },
+      "0507315b-65e1-473c-be0d-15953b5b2ac4": {
+        "position": {
+          "x": 140,
+          "y": 24.8
+        }
+      },
+      "56ca784b-de5d-4b06-995b-a972c251b940": {
+        "position": {
+          "x": 388.8,
+          "y": 21.6
+        },
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "pt-BR"
+          }
+        },
+        "overrideConsoleVoice": true
+      }
+    },
+    "Annotations": [],
+    "name": "AR_MD_Inicializacao",
+    "description": "Modulo corporativo Ares Saude para ativacao de CloudWatch Logs e definicao de voz TTS Vitoria",
+    "status": "published",
+    "settings": {},
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "35226338-420e-40ec-845e-56fa81e61013",
+      "Type": "EndFlowModuleExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "0507315b-65e1-473c-be0d-15953b5b2ac4",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "56ca784b-de5d-4b06-995b-a972c251b940"
+      }
+    },
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Vitoria",
+        "TextToSpeechEngine": "Neural",
+        "TextToSpeechStyle": "None"
+      },
+      "Identifier": "56ca784b-de5d-4b06-995b-a972c251b940",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "35226338-420e-40ec-845e-56fa81e61013",
+        "Errors": [
+          {
+            "NextAction": "35226338-420e-40ec-845e-56fa81e61013",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ],
+  "Settings": {
+    "InputParameters": [],
+    "OutputParameters": [],
+    "Transitions": [
+      {
+        "DisplayName": "Success",
+        "ReferenceName": "Success",
+        "Description": ""
+      },
+      {
+        "DisplayName": "Error",
+        "ReferenceName": "Error",
+        "Description": ""
+      }
+    ]
+  }
+}
