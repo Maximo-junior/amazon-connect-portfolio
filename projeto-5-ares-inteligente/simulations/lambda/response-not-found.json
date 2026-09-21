@@ -1,0 +1,5 @@
+{
+  "statusCode": "404",
+  "statusExame": "NOT_FOUND",
+  "mensagem": "Nenhum laudo localizado para o identificador informado"
+}

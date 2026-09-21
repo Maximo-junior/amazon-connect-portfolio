@@ -18,7 +18,7 @@ Para demonstrar evolução técnica, escalabilidade e governança, todos os proj
 | ⏳ Projeto 2: Expansão de Atendimento | Básico + | Queues, Routing Profiles, Hours of Operation, agentes e transbordo | **Concluído** |
 | ⏳ Projeto 3: Pronto Atendimento Ares | Intermediário | Contact Attributes, contexto de contato, segmentação e roteamento contextual | **Concluído** |
 | ⏳ Projeto 4: Hospital Ares | Intermediário Avançado | Flow Modules, reutilização de componentes e arquitetura multi-departamental | **Concluído** |
-| ⏳ Projeto 5: Ares Inteligente | Avançado | Autosserviço, integrações e simulação arquitetural com Lex, Lambda, APIs e Analytics | *Em desenvolvimento*|
+| ⏳ Projeto 5: Ares Inteligente | Avançado | Autosserviço, integrações e simulação arquitetural com Lex, Lambda, APIs e Analytics | **Concluído**|
 | ⏳ Projeto 6: Ares Enterprise | Profissional | Segurança, governança, observabilidade, runbooks e Disaster Recovery | *Planejado* |
 
 ---

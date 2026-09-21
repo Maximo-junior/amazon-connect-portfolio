@@ -1,0 +1,5 @@
+{
+  "statusCode": "500",
+  "statusExame": "ERROR",
+  "mensagem": "Falha interna no microsservico hospitalar"
+}

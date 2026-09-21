@@ -1,0 +1,5 @@
+{
+  "statusCode": "504",
+  "statusExame": "TIMEOUT",
+  "mensagem": "Tempo limite excedido na comunicacao com o prontuario hospitalar"
+}

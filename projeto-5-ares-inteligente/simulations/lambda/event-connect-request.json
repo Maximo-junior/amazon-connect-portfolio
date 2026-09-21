@@ -1,0 +1,28 @@
+{
+  "Details": {
+    "ContactData": {
+      "Attributes": {
+        "CanalEntrada": "Voz",
+        "SegmentoCliente": "Convenio"
+      },
+      "Channel": "VOICE",
+      "ContactId": "c85d6874-9f20-4e36-b188-45a709211c4a",
+      "CustomerEndpoint": {
+        "Address": "+5511999998888",
+        "Type": "TELEPHONE_NUMBER"
+      },
+      "InitialContactId": "c85d6874-9f20-4e36-b188-45a709211c4a",
+      "InstanceARN": "arn:aws:connect:us-east-1:123456789012:instance/ares-saude-instance",
+      "PreviousContactId": "c85d6874-9f20-4e36-b188-45a709211c4a",
+      "Queue": null,
+      "SystemEndpoint": {
+        "Address": "+551140001000",
+        "Type": "TELEPHONE_NUMBER"
+      }
+    },
+    "Parameters": {
+      "idPaciente": "ARES-702"
+    }
+  },
+  "Name": "ContactFlowEvent"
+}

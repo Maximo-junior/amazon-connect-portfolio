@@ -1,0 +1,8 @@
+{
+  "statusCode": "200",
+  "statusExame": "FOUND",
+  "pacienteNome": "Carlos Eduardo",
+  "tipoExame": "Ressonancia Magnetica",
+  "dataLiberacao": "2026-09-20",
+  "situacaoLaudo": "Disponivel no portal do paciente"
+}

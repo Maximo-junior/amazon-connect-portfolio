@@ -1,0 +1,276 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "77a4c25d-d1dd-4689-9b01-843565e5a3bd",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "630e1619-36b5-446d-b415-3750f0ae2ade": {
+        "position": {
+          "x": 983.2,
+          "y": 16
+        }
+      },
+      "eb82f932-a2c7-4e16-bf26-51e1c5f05c57": {
+        "position": {
+          "x": 988,
+          "y": 522.4
+        },
+        "parameters": {
+          "FlowModuleId": {
+            "displayName": "AR_MD_Tratamento_Erros",
+            "Alias": {
+              "displayName": "$LATEST"
+            }
+          }
+        },
+        "contactFlowModuleName": "AR_MD_Tratamento_Erros"
+      },
+      "682d35a2-7461-44b9-ab9e-b5bb8a89480b": {
+        "position": {
+          "x": 1594.4,
+          "y": 909.6
+        }
+      },
+      "8455c50c-e28a-443e-8605-c2bf0a3b479e": {
+        "position": {
+          "x": 453.6,
+          "y": 21.6
+        },
+        "parameters": {
+          "FlowModuleId": {
+            "displayName": "AR_MD_Verifica_Horario",
+            "Alias": {
+              "displayName": "$LATEST"
+            }
+          }
+        },
+        "contactFlowModuleName": "AR_MD_Verifica_Horario"
+      },
+      "77a4c25d-d1dd-4689-9b01-843565e5a3bd": {
+        "position": {
+          "x": 164.8,
+          "y": 28.8
+        },
+        "parameters": {
+          "FlowModuleId": {
+            "displayName": "AR_MD_Inicializacao",
+            "Alias": {
+              "displayName": "$LATEST"
+            }
+          }
+        },
+        "contactFlowModuleName": "AR_MD_Inicializacao"
+      },
+      "8975b7fe-b6d2-4593-bfb7-2b77fbfe040a": {
+        "position": {
+          "x": 722.4,
+          "y": 24
+        },
+        "conditionMetadata": [
+          {
+            "id": "9fd5b9c6-75ef-4714-a713-341b5c0a8765",
+            "value": "1"
+          },
+          {
+            "id": "ad3ef110-1644-4393-808d-25f2964f81b3",
+            "value": "2"
+          }
+        ]
+      },
+      "c5d69dba-9156-468e-8c0a-cdd632d3f3ea": {
+        "position": {
+          "x": 1255.2,
+          "y": 276.8
+        }
+      },
+      "8fd67a86-29eb-43dd-8c99-dc6cc0973d60": {
+        "position": {
+          "x": 986.4,
+          "y": 208
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "AR_Q_Consultas"
+          }
+        },
+        "queue": {
+          "text": "AR_Q_Consultas"
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "AR_CF_Ares_Inteligente",
+    "description": "Fluxo conversacional do Hospital Ares com autosservico de exames e integracao serverless",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Localizamos o seu laudo de Ressonância Magnética liberado em 20 de setembro. A situação atual é: Disponível no portal do paciente. A Ares Saúde agradece sua ligação."
+      },
+      "Identifier": "630e1619-36b5-446d-b415-3750f0ae2ade",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+        "Errors": [
+          {
+            "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowModuleId": "20393364-d793-4cbb-b972-d67f083edac1:$LATEST"
+      },
+      "Identifier": "eb82f932-a2c7-4e16-bf26-51e1c5f05c57",
+      "Type": "InvokeFlowModule",
+      "Transitions": {
+        "NextAction": "8975b7fe-b6d2-4593-bfb7-2b77fbfe040a",
+        "Errors": [
+          {
+            "NextAction": "8975b7fe-b6d2-4593-bfb7-2b77fbfe040a",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "FlowModuleId": "ecafe3fb-8efa-4107-b3a2-3b32406f6438:$LATEST"
+      },
+      "Identifier": "8455c50c-e28a-443e-8605-c2bf0a3b479e",
+      "Type": "InvokeFlowModule",
+      "Transitions": {
+        "NextAction": "8975b7fe-b6d2-4593-bfb7-2b77fbfe040a",
+        "Errors": [
+          {
+            "NextAction": "8975b7fe-b6d2-4593-bfb7-2b77fbfe040a",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowModuleId": "1a8bc57b-4c92-4fc1-b6d7-1095c335f86c:$LATEST"
+      },
+      "Identifier": "77a4c25d-d1dd-4689-9b01-843565e5a3bd",
+      "Type": "InvokeFlowModule",
+      "Transitions": {
+        "NextAction": "8455c50c-e28a-443e-8605-c2bf0a3b479e",
+        "Errors": [
+          {
+            "NextAction": "8455c50c-e28a-443e-8605-c2bf0a3b479e",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Olá! Sou a assistente virtual do Hospital Ares. Como posso ajudar você hoje?"
+      },
+      "Identifier": "8975b7fe-b6d2-4593-bfb7-2b77fbfe040a",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "eb82f932-a2c7-4e16-bf26-51e1c5f05c57",
+        "Conditions": [
+          {
+            "NextAction": "630e1619-36b5-446d-b415-3750f0ae2ade",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "8fd67a86-29eb-43dd-8c99-dc6cc0973d60",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "eb82f932-a2c7-4e16-bf26-51e1c5f05c57",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "eb82f932-a2c7-4e16-bf26-51e1c5f05c57",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "eb82f932-a2c7-4e16-bf26-51e1c5f05c57",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "c5d69dba-9156-468e-8c0a-cdd632d3f3ea",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+        "Errors": [
+          {
+            "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/queue/c2c18098-b4b9-43e8-8371-c4a7181bfc9c"
+      },
+      "Identifier": "8fd67a86-29eb-43dd-8c99-dc6cc0973d60",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "c5d69dba-9156-468e-8c0a-cdd632d3f3ea",
+        "Errors": [
+          {
+            "NextAction": "682d35a2-7461-44b9-ab9e-b5bb8a89480b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
