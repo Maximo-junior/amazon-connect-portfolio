@@ -1,56 +1,92 @@
-# 🌐 Amazon Connect Engineering Portfolio — Ecossistema Ares
+# 🌐 Amazon Connect Engineering Portfolio — Ecossistema Ares Saúde
 
-Este repositório centraliza a construção de soluções de **Contact Center utilizando Amazon Connect** e o ecossistema de nuvem da **Amazon Web Services (AWS)**.
+> **Laboratório prático de Amazon Connect, AWS, CCaaS, APIs, CTI, CRM e desenvolvimento de aplicações para Contact Center.**
 
-O objetivo deste portfólio é demonstrar, de forma **prática, progressiva e tecnicamente documentada**, conhecimentos em:
+O **Ecossistema Ares Saúde** é um laboratório de engenharia criado para demonstrar, de forma **progressiva, prática e tecnicamente documentada**, a evolução de uma arquitetura de Contact Center utilizando **Amazon Connect e serviços AWS**.
 
-* Arquitetura de Contact Center
-* Customer Experience (CX)
+A solução parte de uma estrutura inicial de atendimento e evolui gradualmente para um ecossistema integrado envolvendo:
+
+* Amazon Connect
 * Contact Flows
-* URA/IVR
+* URA / IVR
 * Filas e roteamento
 * Contact Attributes
-* Arquitetura modular
+* Flow Modules
 * AWS Serverless
-* APIs e integrações
-* IA conversacional
-* CTI e CRM
+* APIs REST
+* Amazon Lex
+* AWS Lambda
+* Amazon DynamoDB
+* CTI
+* CRM
+* Screen Pop
+* Salesforce
+* EspoCRM
+* Twenty CRM
 * Segurança e IAM
 * Observabilidade
-* Governança
 * FinOps
 * Tratamento de falhas
 * Testes e troubleshooting
-* Integrações corporativas
 * Desenvolvimento Front-End
-* Aplicações web para Contact Center
+* Aplicação Web para Contact Center
 
-Os projetos representam a evolução tecnológica de uma organização de saúde fictícia chamada **Ares Saúde**, partindo de uma estrutura inicial de triagem e evoluindo progressivamente para uma arquitetura de Contact Center integrada a serviços AWS, APIs, CTI, plataformas CRM e uma aplicação web própria para atendimento.
+> **Importante:** o Ares Saúde é um cenário fictício criado exclusivamente para fins educacionais e de portfólio. Todos os dados utilizados são fictícios.
 
 ---
 
-## 🗺️ Trilha de Evolução Arquitetural
+# 🎯 O que este portfólio demonstra
+
+O objetivo não é apenas apresentar conhecimento sobre serviços AWS, mas demonstrar a capacidade de:
+
+* Projetar arquiteturas de Contact Center
+* Criar e evoluir Contact Flows
+* Trabalhar com filas, roteamento e contexto
+* Utilizar Contact Attributes
+* Desenvolver arquiteturas modulares
+* Integrar Amazon Connect com serviços AWS
+* Desenvolver integrações via APIs
+* Trabalhar com Serverless
+* Integrar soluções de CRM e CTI
+* Desenvolver interfaces com Vue.js e TypeScript
+* Implementar tratamento de erros e cenários de falha
+* Aplicar IAM e princípios de Least Privilege
+* Trabalhar com observabilidade
+* Analisar e controlar custos
+* Criar testes positivos e negativos
+* Investigar problemas e realizar troubleshooting
+* Documentar decisões arquiteturais
+* Explicar trade-offs técnicos
+* Construir uma experiência visual própria para atendimento
+
+A proposta é demonstrar **evolução técnica**, e não apenas uma coleção de tecnologias.
+
+---
+
+# 🗺️ Trilha de Evolução Arquitetural
 
 O Ecossistema Ares Saúde é desenvolvido de forma incremental.
 
-Cada projeto reutiliza conceitos, componentes e decisões dos projetos anteriores, aumentando gradualmente a complexidade técnica da solução.
+Cada projeto reutiliza conceitos, componentes e decisões dos projetos anteriores, aumentando progressivamente a complexidade da solução.
+
+---
 
 ## 🔹 Fase 1 — Fundação Amazon Connect
 
 | Projeto                                                         | Nível                  | Escopo Técnico Principal                                                        | Status        |
 | --------------------------------------------------------------- | ---------------------- | ------------------------------------------------------------------------------- | ------------- |
 | 🚀 [Projeto 1 — Ares Triagem Inicial](./projeto-1-triagem-ares) | Básico                 | Contact Flows, URA/IVR, prompts, menus e tratamento de erros                    | **Concluído** |
-| 🚀 Projeto 2 — Ares Routing & Queues                            | Básico +               | Queues, Routing Profiles, Hours of Operation, agentes e transbordo              | **Concluído** |
+| 🚀 Projeto 2 — Ares Routing & Queues                            | Básico+                | Queues, Routing Profiles, Hours of Operation, agentes e transbordo              | **Concluído** |
 | 🚀 Projeto 3 — Ares Context & Contact Attributes                | Intermediário          | Contact Attributes, contexto de contato, segmentação e roteamento contextual    | **Concluído** |
-| 🚀 Projeto 4 — Ares Modular Architecture                        | Intermediário Avançado | Flow Modules, reutilização de componentes e arquitetura multi-departamental     | **Concluído** |
+| 🚀 Projeto 4 — Ares Modular Architecture                        | Intermediário/Avançado | Flow Modules, reutilização de componentes e arquitetura multi-departamental     | **Concluído** |
 | 🚀 Projeto 5 — Ares Inteligente                                 | Avançado               | Autosserviço, inteligência conversacional, integrações e arquitetura serverless | **Concluído** |
 | 🚀 Projeto 6 — Ares Enterprise                                  | Profissional           | Segurança, governança, observabilidade, FinOps e Disaster Recovery              | **Concluído** |
 
 ---
 
-## 🔹 Fase 2 — AWS Serverless, APIs e Integrações
+# 🔹 Fase 2 — AWS Serverless, APIs e Integrações
 
-A segunda fase amplia o Ecossistema Ares para além dos recursos nativos de Contact Flow, introduzindo integrações práticas com serviços AWS e sistemas externos.
+A segunda fase amplia o Ecossistema Ares para além dos recursos nativos do Contact Flow.
 
 | Projeto                                     | Nível        | Escopo Técnico Principal                                                   | Status                 |
 | ------------------------------------------- | ------------ | -------------------------------------------------------------------------- | ---------------------- |
@@ -61,30 +97,38 @@ A segunda fase amplia o Ecossistema Ares para além dos recursos nativos de Cont
 
 ---
 
-## 🔹 Fase 3 — CRM, CTI e Integrações Corporativas
+# 🔹 Fase 3 — CRM, CTI e Integrações Corporativas
 
-A terceira fase aplica os conceitos desenvolvidos anteriormente em cenários de integração com plataformas CRM utilizadas em ambientes corporativos.
+Nesta fase, os conceitos desenvolvidos anteriormente serão aplicados em cenários de integração com diferentes modelos de CRM.
 
-| Projeto                                            | Nível        | Escopo Técnico Principal                                                  | Status        |
-| -------------------------------------------------- | ------------ | ------------------------------------------------------------------------- | ------------- |
-| 🔜 Projeto 11 — Salesforce Customer Identification | Profissional | Salesforce API, identificação do cliente, Contact Attributes e Screen Pop | **Planejado** |
-| 🔜 Projeto 12 — Salesforce Service Automation      | Profissional | Cases, Activities, pós-atendimento, automação e idempotência              | **Planejado** |
-| 🔜 Projeto 13 — HubSpot Integration                | Profissional | HubSpot API, contatos, atividades, autenticação e integração com Connect  | **Planejado** |
-| 🔜 Projeto 14 — Microsoft Dynamics 365             | Profissional | CTI, Customer Service, Dataverse, Web API e integração com Connect        | **Planejado** |
+| Projeto                                            | Nível        | Escopo Técnico Principal                                                    | Status        |
+| -------------------------------------------------- | ------------ | --------------------------------------------------------------------------- | ------------- |
+| 🔜 Projeto 11 — Salesforce Customer Identification | Profissional | Salesforce API, identificação do cliente, Contact Attributes e Screen Pop   | **Planejado** |
+| 🔜 Projeto 12 — Salesforce Service Automation      | Profissional | Cases, Activities, pós-atendimento, automação e idempotência                | **Planejado** |
+| 🔜 Projeto 13 — EspoCRM Integration                | Profissional | REST API, contatos, contas, atividades, Cases e integração com Connect      | **Planejado** |
+| 🔜 Projeto 14 — Twenty CRM Integration             | Profissional | APIs, pessoas, empresas, oportunidades, atividades e integração com Connect | **Planejado** |
+
+### CRM utilizados no laboratório
+
+**Salesforce** será utilizado como referência de um CRM corporativo.
+
+**EspoCRM** e **Twenty** serão priorizados para experimentação prática quando uma implementação real puder ser realizada de forma segura e controlada.
+
+> O fato de uma plataforma ser open source ou self-hosted não significa automaticamente custo zero. Infraestrutura, armazenamento, tráfego e outros componentes serão avaliados individualmente.
 
 ---
 
-## 🔹 Fase 4 — Ares Contact Center Web App
+# 🔹 Fase 4 — Ares Contact Center Web App
 
 A quarta fase transforma os conhecimentos desenvolvidos nos Projetos 1–14 em uma aplicação web própria para atendimento.
 
-O objetivo não é criar apenas uma landing page ou página institucional.
+O objetivo não é criar uma landing page.
 
-O objetivo é desenvolver uma **interface funcional de Contact Center**, construída principalmente no VS Code, capaz de apresentar informações do atendimento e consumir dados provenientes do Amazon Connect, AWS, APIs e CRMs.
+O objetivo é desenvolver uma **interface funcional de Contact Center**, construída principalmente com **Vue.js e TypeScript**, capaz de apresentar informações do atendimento e consumir dados provenientes do Amazon Connect, AWS, APIs e CRMs.
 
-| Projeto                                     | Nível        | Escopo Técnico Principal                                                                               | Status        |
-| ------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------ | ------------- |
-| 🚀 Projeto 15 — Ares Contact Center Web App | Profissional | Vue.js, TypeScript, Front-End, APIs, CTI, Screen Pop, contexto do atendimento e integração com AWS/CRM | **Planejado** |
+| Projeto                                     | Nível        | Escopo Técnico Principal                                                                    | Status        |
+| ------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------- | ------------- |
+| 🚀 Projeto 15 — Ares Contact Center Web App | Profissional | Vue.js, TypeScript, APIs, CTI, Screen Pop, contexto do atendimento e integração com AWS/CRM | **Planejado** |
 
 O P15 funcionará como uma camada visual de consolidação dos projetos anteriores.
 
@@ -92,51 +136,51 @@ O P15 funcionará como uma camada visual de consolidação dos projetos anterior
 
 # 🏗️ Evolução da Arquitetura
 
-A arquitetura do Ecossistema Ares evolui progressivamente:
-
 ```text
 P1
 Amazon Connect
-      ↓
+     ↓
 Contact Flows / URA
-      ↓
+     ↓
 P2
 Queues + Routing
-      ↓
+     ↓
 P3
 Contact Attributes + Contexto
-      ↓
+     ↓
 P4
 Flow Modules + Arquitetura Modular
-      ↓
+     ↓
 P5
 Autosserviço + Inteligência
-      ↓
+     ↓
 P6
 Segurança + Governança + Observabilidade
-      ↓
+     ↓
 P7
 Lambda + DynamoDB
-      ↓
+     ↓
 P8
 Lex + Lambda + Backend
-      ↓
+     ↓
 P9
 APIs + Sistemas Externos
-      ↓
+     ↓
 P10
 CTI + CRM Architecture
-      ↓
+     ↓
 P11–P14
-Salesforce + HubSpot + Dynamics 365
-      ↓
+Salesforce + EspoCRM + Twenty
+     ↓
 P15
 Ares Contact Center Web App
-      ↓
+     ↓
 Front-End + APIs + AWS + Connect + CRM
 ```
 
-O objetivo não é criar projetos independentes, mas demonstrar a **evolução de uma arquitetura de Contact Center ao longo de diferentes níveis de complexidade**.
+O objetivo não é criar projetos independentes.
+
+A proposta é demonstrar a **evolução de uma arquitetura de Contact Center ao longo de diferentes níveis de complexidade**.
 
 ---
 
@@ -162,29 +206,34 @@ O objetivo não é criar projetos independentes, mas demonstrar a **evolução d
 * Amazon CloudWatch
 * AWS IAM
 * AWS Secrets Manager, quando aplicável
+* AWS CLI
+* AWS SDK
 * Outros serviços AWS conforme necessidade arquitetural
 
-## 🔌 Integrações
+## 🔌 APIs & Integrações
 
 * APIs REST
-* HTTP/JSON
+* HTTP / JSON
 * Autenticação
 * OAuth
 * Web APIs
 * Integrações com sistemas externos
-* Tratamento de timeout
-* Retry e Backoff
+* Timeout
+* Retry
+* Exponential Backoff
 * Idempotência
-* Circuit Breaker em cenários aplicáveis
+* Circuit Breaker, quando aplicável
+* Tratamento de erros
 
 ## 🏢 CRM & CTI
 
 * Salesforce
-* HubSpot
-* Microsoft Dynamics 365
+* EspoCRM
+* Twenty CRM
 * CTI
 * Screen Pop
 * Customer Identification
+* Contact Attributes
 * Cases
 * Activities
 * Pós-atendimento
@@ -196,27 +245,29 @@ O objetivo não é criar projetos independentes, mas demonstrar a **evolução d
 * TypeScript
 * JavaScript
 * Vue.js
-* HTML/CSS
-* Git/GitHub
-* Testes automatizados quando aplicável
+* HTML
+* CSS
+* Git
+* GitHub
+* Testes automatizados, quando aplicável
 
-## 🖥️ Aplicação Web — P15
+---
+
+# 🖥️ Ares Contact Center Web App
 
 O Projeto 15 adicionará uma camada Front-End própria ao Ecossistema Ares.
 
-Tecnologias preferenciais:
+A aplicação será desenvolvida principalmente no **Visual Studio Code**, utilizando:
 
 * Vue.js
 * TypeScript
 * HTML
 * CSS
-* REST/HTTP
+* REST / HTTP
 * APIs
-* Backend/Serverless
+* Backend / Serverless
 
-A aplicação será desenvolvida principalmente no **VS Code**.
-
-O Amazon Connect Console continuará sendo utilizado para a configuração dos recursos próprios do Contact Center, como:
+O **Amazon Connect Console** continuará sendo utilizado para os recursos próprios do Contact Center, como:
 
 * Contact Flows
 * Queues
@@ -226,67 +277,63 @@ O Amazon Connect Console continuará sendo utilizado para a configuração dos r
 * Hours of Operation
 * Flow Modules
 
-Os demais recursos AWS poderão ser desenvolvidos/configurados por meio de:
+Os demais recursos AWS poderão ser desenvolvidos ou configurados utilizando:
 
 * VS Code
 * AWS Console
 * AWS CLI
 * AWS SDK
 
-A ferramenta utilizada dependerá da natureza de cada componente.
+A ferramenta será escolhida de acordo com a natureza de cada componente.
 
 ---
 
-# 🖥️ Ares Contact Center Web App
-
-O P15 tem como objetivo construir uma aplicação web que represente a interface utilizada por um agente de atendimento.
-
-Exemplo conceitual:
+# 🖥️ Conceito do Ares Contact Center Web App
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
 │ ARES CONTACT CENTER                         🟢 Disponível   │
 ├───────────────┬─────────────────────────────┬───────────────┤
 │               │                             │               │
-│ ☎ Contato     │       Cliente               │ Atendimento   │
+│ ☎ Contato     │          Cliente            │ Atendimento   │
 │               │                             │               │
-│ +55 (...)     │       João da Silva         │ Consultas     │
-│               │       ARES-001               │ Exames        │
-│               │                             │ Financeiro    │
-│               │       Histórico              │               │
-│               │       ───────────────        │ 📝 Notas      │
-│               │       Consulta               │               │
-│               │       Exame                  │ 🟢 Em curso   │
+│ +55 (...)     │          ARES-001           │ Consultas     │
+│               │                             │ Exames        │
+│ Contact ID    │          Histórico          │ Financeiro    │
+│               │                             │               │
+│               │          Consulta            │ 📝 Notas      │
+│               │          Exame               │               │
+│               │                             │ 🟢 Em curso   │
 │               │                             │               │
 └───────────────┴─────────────────────────────┴───────────────┘
 ```
 
-A aplicação poderá demonstrar:
+A aplicação poderá demonstrar progressivamente:
 
-* identificação do cliente;
-* Contact ID;
-* Contact Attributes;
-* Screen Pop;
-* informações do cliente;
-* histórico de contatos;
-* fila;
-* agente;
-* status do atendimento;
-* motivo do contato;
-* dados provenientes de CRM;
-* abertura e atualização de Cases;
-* atividades;
-* notas;
-* pós-atendimento;
-* consulta a APIs;
-* tratamento de erros;
-* loading;
-* timeout;
-* indisponibilidade de integração;
-* autenticação;
-* controle de sessão.
+* Identificação do cliente
+* Contact ID
+* Contact Attributes
+* Screen Pop
+* Informações do cliente
+* Histórico de contatos
+* Fila
+* Agente
+* Status do atendimento
+* Motivo do contato
+* Dados provenientes de CRM
+* Abertura e atualização de Cases
+* Activities
+* Notas
+* Pós-atendimento
+* Consulta a APIs
+* Loading
+* Timeout
+* Indisponibilidade de integração
+* Autenticação
+* Controle de sessão
+* Tratamento de erros
 
-As funcionalidades serão implementadas progressivamente.
+As funcionalidades serão implementadas conforme a evolução dos projetos anteriores.
 
 ---
 
@@ -295,46 +342,44 @@ As funcionalidades serão implementadas progressivamente.
 Arquitetura de referência:
 
 ```text
-                    ┌──────────────────────────┐
-                    │     ARES WEB APP         │
-                    │                          │
-                    │   Vue.js + TypeScript    │
-                    │                          │
-                    │  Interface do Agente     │
-                    └────────────┬─────────────┘
-                                 │
-                              HTTPS/API
-                                 │
-                                 ▼
-                    ┌──────────────────────────┐
-                    │      Backend/API         │
-                    │                          │
-                    │ Lambda / REST API        │
-                    └────────────┬─────────────┘
-                                 │
-              ┌──────────────────┼──────────────────┐
-              ▼                  ▼                  ▼
-      Amazon Connect        DynamoDB             CRM/API
-              │                  │                  │
-              │                  │          ┌───────┼────────┐
-              │                  │          ▼       ▼        ▼
-              │                  │      Salesforce HubSpot Dynamics
-              │
-              ▼
-      Contact Attributes
-      Contact Flow
-      Contact ID
-      Queue
-      Agent
+                 ┌──────────────────────────┐
+                 │      ARES WEB APP        │
+                 │                          │
+                 │   Vue.js + TypeScript    │
+                 │                          │
+                 │   Interface do Agente    │
+                 └────────────┬─────────────┘
+                              │
+                           HTTPS
+                              │
+                              ▼
+                 ┌──────────────────────────┐
+                 │       Backend/API        │
+                 │                          │
+                 │   Lambda / REST API      │
+                 └────────────┬─────────────┘
+                              │
+            ┌─────────────────┼─────────────────┐
+            ▼                 ▼                 ▼
+     Amazon Connect       DynamoDB           CRM/API
+            │                 │                 │
+            │                 │        ┌────────┼────────┐
+            │                 │        ▼        ▼        ▼
+            │                 │   Salesforce EspoCRM Twenty
+            │                 │
+            ▼                 │
+     Contact Attributes      │
+     Contact Flow            │
+     Contact ID              │
+     Queue                   │
+     Agent                   │
 ```
 
-A arquitetura final deverá representar somente aquilo que realmente foi implementado.
+A arquitetura final deverá representar **somente aquilo que realmente foi implementado**.
 
 ---
 
 # 🔗 Relação do P15 com os Projetos Anteriores
-
-O P15 funcionará como uma camada de consolidação.
 
 ```text
 P1–P6
@@ -350,24 +395,26 @@ P15
 Ares Contact Center Web App
 ```
 
-Durante o desenvolvimento será identificado:
+Durante o desenvolvimento será identificado claramente:
 
-* o que foi herdado;
-* o que foi reutilizado;
-* o que foi adaptado;
-* o que foi desenvolvido novamente;
-* o que foi adicionado;
-* o que permanece simulado;
-* o que é conceitual;
-* o que foi realmente integrado.
+* O que foi herdado
+* O que foi reutilizado
+* O que foi adaptado
+* O que foi desenvolvido novamente
+* O que foi adicionado
+* O que permanece simulado
+* O que é conceitual
+* O que foi realmente integrado
 
 ---
 
 # 💰 FinOps e Política de Execução
 
-O objetivo financeiro do laboratório é manter o **custo operacional em R$ 0,00 sempre que isso for tecnicamente possível**, mas a possibilidade de cobrança **não significa automaticamente que o recurso será proibido ou apenas simulado**.
+O objetivo financeiro do laboratório é manter o **custo operacional em R$ 0,00 sempre que isso for tecnicamente possível**.
 
-Antes de executar qualquer recurso potencialmente tarifado, o projeto deve identificar:
+Entretanto, a possibilidade de cobrança não significa automaticamente que um recurso será proibido ou apenas simulado.
+
+Antes de executar qualquer recurso potencialmente tarifado, será identificado:
 
 * Qual recurso está sendo utilizado
 * Qual função ele desempenha
@@ -402,17 +449,13 @@ VERIFICAR CONSUMO
 DOCUMENTAR
 ```
 
-A existência de um serviço potencialmente tarifado não determina sozinha sua classificação.
-
-A decisão será baseada no **mecanismo real de cobrança e na possibilidade de realizar uma validação controlada**.
-
-> ⚠️ Free Tier ou créditos disponíveis não são considerados garantia automática de custo zero.
+> **Free Tier ou créditos disponíveis não são considerados garantia automática de custo zero.**
 
 ---
 
 # 🏷️ Classificação dos Recursos
 
-Cada projeto diferencia claramente o que foi realmente realizado no ambiente AWS.
+Cada projeto diferencia claramente o que foi realmente realizado.
 
 ### 🟢 Implementado e Validado
 
@@ -426,7 +469,7 @@ Recurso configurado e executado de maneira limitada, com monitoramento de consum
 
 A arquitetura foi desenvolvida e documentada, mas a execução real não foi realizada por ausência de uma forma segura de validação dentro das condições do laboratório.
 
-A documentação pode incluir:
+A documentação poderá incluir:
 
 * Arquitetura
 * Fluxo
@@ -442,7 +485,7 @@ A documentação pode incluir:
 
 Recurso estudado e documentado como parte da arquitetura, mas que não foi configurado nem executado.
 
-> O portfólio não classifica como "implementado" aquilo que não foi efetivamente configurado e validado.
+> **O portfólio não classifica como "implementado" aquilo que não foi efetivamente configurado e validado.**
 
 ---
 
@@ -450,7 +493,7 @@ Recurso estudado e documentado como parte da arquitetura, mas que não foi confi
 
 Todos os projetos utilizam dados fictícios.
 
-Exemplo:
+Exemplos:
 
 ```text
 ARES-001
@@ -458,7 +501,7 @@ ARES-002
 ARES-003
 ```
 
-Nenhum projeto deve conter:
+Nenhum projeto deverá conter:
 
 * Credenciais reais
 * Access Keys
@@ -475,7 +518,7 @@ Quando necessário, serão utilizados:
 * `.gitignore`
 * IAM Least Privilege
 * OAuth
-* Secrets Manager
+* AWS Secrets Manager
 * Tokens temporários
 * Identificadores fictícios
 
@@ -489,27 +532,18 @@ Exemplos:
 
 ```text
 SUCCESS
-
 NOT_FOUND
-
 INVALID_INPUT
-
 UNAUTHORIZED
-
 FORBIDDEN
-
 TIMEOUT
-
 RATE_LIMIT
-
 INTERNAL_ERROR
-
 SERVICE_UNAVAILABLE
-
 INVALID_RESPONSE
 ```
 
-Quando aplicável, também serão utilizados:
+Quando aplicável, serão utilizados:
 
 * Retry
 * Exponential Backoff
@@ -524,7 +558,7 @@ Quando aplicável, também serão utilizados:
 
 # 📊 Observabilidade
 
-As integrações devem considerar, quando aplicável:
+As integrações deverão considerar, quando aplicável:
 
 * Contact ID
 * Flow ID
@@ -538,15 +572,17 @@ As integrações devem considerar, quando aplicável:
 * Falhas de autenticação
 * Indisponibilidade de serviços
 
-Credenciais e tokens nunca devem ser registrados nos logs.
+> Credenciais, tokens e informações sensíveis nunca deverão ser registrados nos logs.
 
 ---
 
 # 📚 Documentação
 
-Cada projeto pode possuir sua própria documentação técnica, incluindo:
+Cada projeto poderá possuir sua própria documentação técnica.
 
-```
+Estrutura de referência:
+
+```text
 README.md
 
 docs/
@@ -558,19 +594,23 @@ docs/
 └── decisions.md
 
 src/
+
 tests/
+
 simulations/
+
 evidence/
+
 diagrams/
 ```
 
-A estrutura pode variar conforme a natureza de cada projeto.
+A estrutura poderá variar de acordo com a natureza de cada projeto.
 
 ---
 
 # 🎥 Evidências e Demonstrações
 
-Os projetos devem priorizar evidências práticas.
+Os projetos priorizam evidências práticas.
 
 Quando aplicável, serão utilizados:
 
@@ -587,22 +627,54 @@ Quando aplicável, serão utilizados:
 * Testes
 * Tratamento de erros
 
-No P15, o vídeo deverá demonstrar principalmente a aplicação funcionando e sua integração com os componentes do Ecossistema Ares.
+## 🎬 Estrutura de demonstração
 
-Exemplo de demonstração:
-
-```
-1. Apresentar arquitetura
-2. Abrir Ares Web App
-3. Demonstrar atendimento
-4. Mostrar dados do cliente
-5. Demonstrar integração
-6. Demonstrar erro controlado
-7. Mostrar tratamento do erro
+```text
+1. Apresentar o problema
+2. Apresentar a arquitetura
+3. Demonstrar a solução
+4. Mostrar a implementação
+5. Executar um teste
+6. Demonstrar um cenário de erro
+7. Mostrar o tratamento do erro
 8. Mostrar código relevante
-9. Mostrar Amazon Connect quando aplicável
+9. Mostrar AWS / Amazon Connect quando aplicável
 10. Explicar o que foi realmente implementado
+11. Explicar custos e decisões de FinOps
 ```
+
+No P15, o foco da demonstração será principalmente a aplicação funcionando e sua integração com os componentes do Ecossistema Ares.
+
+---
+
+# 🧠 Princípio de Desenvolvimento
+
+O laboratório segue uma abordagem de:
+
+```text
+EXPLICAR
+   ↓
+EXECUTAR
+   ↓
+VALIDAR
+   ↓
+DOCUMENTAR
+   ↓
+AVANÇAR
+```
+
+Cada etapa deverá responder:
+
+* Por que isso existe?
+* Quando utilizar?
+* Quando não utilizar?
+* Como funciona?
+* Quanto pode custar?
+* Como proteger?
+* Como testar?
+* Como observar?
+* Como diagnosticar?
+* Como explicar isso em uma entrevista?
 
 ---
 
@@ -610,39 +682,23 @@ Exemplo de demonstração:
 
 O objetivo deste portfólio é demonstrar uma evolução prática em **Amazon Connect Engineering**, conectando conhecimentos de:
 
-```
+```text
 Amazon Connect
-
       +
-
 AWS
-
       +
-
 Serverless
-
       +
-
 APIs
-
       +
-
 CTI
-
       +
-
 CRM
-
       +
-
 Desenvolvimento
-
       +
-
 Suporte Técnico
-
       +
-
 Front-End
 ```
 
@@ -657,14 +713,14 @@ A proposta é demonstrar não apenas conhecimento teórico, mas a capacidade de:
 * Controlar custos
 * Aplicar segurança
 * Testar cenários
-* Explicar uma arquitetura técnica
-* Construir uma experiência visual para atendimento
+* Explicar arquiteturas
+* Construir experiências para atendimento
 
 ---
 
 # 🚀 Status do Portfólio
 
-### Fase 1 — Fundação
+### Fase 1 — Fundação Amazon Connect
 
 **P1 → P6**
 
@@ -690,14 +746,84 @@ A proposta é demonstrar não apenas conhecimento teórico, mas a capacidade de:
 
 ---
 
+# 📌 Status de Implementação
+
+O status apresentado neste README representa o estado atual do laboratório.
+
+Projetos futuros não são apresentados como experiência profissional prévia.
+
+Cada implementação deverá indicar claramente se determinado componente foi:
+
+* **Implementado e validado**
+* **Implementado em teste controlado**
+* **Simulado**
+* **Conceitual**
+
+Essa distinção existe para manter a **transparência técnica do portfólio**.
+
+---
+
 # 👨‍💻 Sobre
 
 **Máximo Monteiro**
 
-Technical Support Analyst N2/N3 | Front-End Developer | AWS & Amazon Connect
+**Technical Support Analyst N2/N3 | Front-End Developer | AWS Cloud & Amazon Connect**
 
-Este portfólio representa meu processo de especialização em **Amazon Connect, AWS, CCaaS, CTI e integrações**, combinando minha experiência anterior em suporte técnico e desenvolvimento com uma trajetória prática de construção de soluções em nuvem.
+Este portfólio representa meu processo de especialização em **Amazon Connect, AWS, CCaaS, CTI e integrações**, combinando minha experiência anterior em suporte técnico e desenvolvimento com uma trajetória prática de construção e documentação de soluções em nuvem.
 
-**LinkedIn:** https://www.linkedin.com/in/maximojunior/
+### 🔗 Links
 
-**GitHub:** https://github.com/Maximo-junior
+* **LinkedIn:** https://www.linkedin.com/in/maximojunior/
+* **GitHub:** https://github.com/Maximo-junior
+
+---
+
+# 📖 Navegação
+
+* [Projeto 1 — Ares Triagem Inicial](./projeto-1-triagem-ares)
+* Projeto 2 — Ares Routing & Queues
+* Projeto 3 — Ares Context & Contact Attributes
+* Projeto 4 — Ares Modular Architecture
+* Projeto 5 — Ares Inteligente
+* Projeto 6 — Ares Enterprise
+* Projeto 7 — Ares Serverless
+* Projeto 8 — Ares Conversational
+* Projeto 9 — Ares API & Integrations
+* Projeto 10 — Ares CTI & CRM Architecture
+* Projeto 11 — Salesforce Customer Identification
+* Projeto 12 — Salesforce Service Automation
+* Projeto 13 — EspoCRM Integration
+* Projeto 14 — Twenty CRM Integration
+* Projeto 15 — Ares Contact Center Web App
+
+---
+
+## 🚀 Visão Final
+
+O Ecossistema Ares Saúde representa uma jornada de aprendizado e construção que parte de **Amazon Connect e Contact Flows** e evolui para uma arquitetura envolvendo:
+
+```text
+Contact Center
+      ↓
+Amazon Connect
+      ↓
+AWS
+      ↓
+Serverless
+      ↓
+APIs
+      ↓
+CTI
+      ↓
+CRM
+      ↓
+Screen Pop
+      ↓
+Front-End
+      ↓
+Ares Contact Center Web App
+```
+
+O objetivo final é demonstrar a capacidade de **projetar, implementar, testar, observar, documentar e explicar soluções de Contact Center**, mantendo transparência sobre aquilo que foi efetivamente construído.
+
+> **Construir. Validar. Documentar. Explicar. Evoluir.**
