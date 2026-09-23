@@ -1,0 +1,101 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "3381839f-7a9a-42ca-85f0-b4a23e78e6cb",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "3381839f-7a9a-42ca-85f0-b4a23e78e6cb": {
+        "position": {
+          "x": 160.8,
+          "y": 47.2
+        },
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "pt-BR"
+          }
+        },
+        "overrideConsoleVoice": true
+      },
+      "979f2246-6a7a-4139-84d7-a08d09c3a824": {
+        "position": {
+          "x": 489.6,
+          "y": 283.2
+        }
+      },
+      "baffad1f-4545-42b5-8598-1ab51a7490a3": {
+        "position": {
+          "x": 435.2,
+          "y": 45.6
+        }
+      },
+      "c8018d9b-f6a5-4fa2-9773-9da0890a7a19": {
+        "position": {
+          "x": 676.8,
+          "y": 32
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "AR_CF_Contingencia_DR",
+    "description": "",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Vitoria",
+        "TextToSpeechEngine": "Neural",
+        "TextToSpeechStyle": "None"
+      },
+      "Identifier": "3381839f-7a9a-42ca-85f0-b4a23e78e6cb",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "baffad1f-4545-42b5-8598-1ab51a7490a3",
+        "Errors": [
+          {
+            "NextAction": "979f2246-6a7a-4139-84d7-a08d09c3a824",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "979f2246-6a7a-4139-84d7-a08d09c3a824",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "baffad1f-4545-42b5-8598-1ab51a7490a3",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "c8018d9b-f6a5-4fa2-9773-9da0890a7a19"
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Atenção: o Complexo Hospitalar Ares está operando temporariamente em protocolo de contingência técnica. No momento, nossos canais de atendimento telefônico estão dedicados exclusivamente a ocorrências críticas. Caso necessite de atendimento médico imediato, dirija-se diretamente ao Pronto Atendimento físico da nossa unidade. Para agendamentos e laudos, acesse nosso portal ou tente novamente mais tarde. Agradecemos a compreensão."
+      },
+      "Identifier": "c8018d9b-f6a5-4fa2-9773-9da0890a7a19",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "979f2246-6a7a-4139-84d7-a08d09c3a824",
+        "Errors": [
+          {
+            "NextAction": "979f2246-6a7a-4139-84d7-a08d09c3a824",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

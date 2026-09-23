@@ -42,7 +42,7 @@ Cada projeto reutiliza conceitos, componentes e decisões dos projetos anteriore
 | 🚀 Projeto 3 — Ares Context & Contact Attributes                | Intermediário          | Contact Attributes, contexto de contato, segmentação e roteamento contextual    | **Concluído** |
 | 🚀 Projeto 4 — Ares Modular Architecture                        | Intermediário Avançado | Flow Modules, reutilização de componentes e arquitetura multi-departamental     | **Concluído** |
 | 🚀 Projeto 5 — Ares Inteligente                                 | Avançado               | Autosserviço, inteligência conversacional, integrações e arquitetura serverless | **Concluído** |
-| 🚀 Projeto 6 — Ares Enterprise                                  | Profissional           | Segurança, governança, observabilidade, FinOps e Disaster Recovery              | **Em desenvolvimento** |
+| 🚀 Projeto 6 — Ares Enterprise                                  | Profissional           | Segurança, governança, observabilidade, FinOps e Disaster Recovery              | **Concluído** |
 
 ---
 
@@ -52,7 +52,7 @@ A segunda fase amplia o Ecossistema Ares para além dos recursos nativos de Cont
 
 | Projeto                                     | Nível        | Escopo Técnico Principal                                                   | Status        |
 | ------------------------------------------- | ------------ | -------------------------------------------------------------------------- | ------------- |
-| 🔜 Projeto 7 — Ares Serverless              | Avançado     | Amazon Connect, AWS Lambda, DynamoDB, IAM, validação e tratamento de erros | **Planejado** |
+| 🔜 Projeto 7 — Ares Serverless              | Avançado     | Amazon Connect, AWS Lambda, DynamoDB, IAM, validação e tratamento de erros | **Em desenvolvimento** |
 | 🔜 Projeto 8 — Ares Conversational          | Avançado     | Amazon Connect, Amazon Lex, Lambda, DynamoDB/API e NLU                     | **Planejado** |
 | 🔜 Projeto 9 — Ares API & Integrations      | Avançado     | Lambda, APIs REST, JSON, autenticação, timeout, retry e sistemas externos  | **Planejado** |
 | 🔜 Projeto 10 — Ares CTI & CRM Architecture | Profissional | CTI, CRM, contexto de atendimento, Screen Pop e arquitetura de integração  | **Planejado** |
