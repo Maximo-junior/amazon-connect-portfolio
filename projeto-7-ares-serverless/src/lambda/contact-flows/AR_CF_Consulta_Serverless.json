@@ -1,0 +1,410 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "AR_SetVoice",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -142.4,
+      "y": -544
+    },
+    "ActionMetadata": {
+      "AR_Msg_LaudoDisponivel": {
+        "position": {
+          "x": 1320.8,
+          "y": -568
+        },
+        "isFriendlyName": true
+      },
+      "AR_Msg_NaoLocalizado.": {
+        "position": {
+          "x": 1358.4,
+          "y": -385.6
+        },
+        "isFriendlyName": true
+      },
+      "aad82cb7-0757-4bc5-8bfe-2d21454c40ef": {
+        "position": {
+          "x": 1768.8,
+          "y": 157.6
+        }
+      },
+      "0f611cb7-f4a6-44ac-993b-27da7ff0df06": {
+        "position": {
+          "x": 2061.6,
+          "y": -212
+        }
+      },
+      "ecdd6825-203c-4efc-bed5-c1fe1633ac3f": {
+        "position": {
+          "x": 1214.4,
+          "y": 100.8
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "AR_Q_Consultas"
+          }
+        },
+        "queue": {
+          "text": "AR_Q_Consultas"
+        }
+      },
+      "AR_Msg_StatusInesperado": {
+        "position": {
+          "x": 1373.6,
+          "y": -175.2
+        },
+        "isFriendlyName": true
+      },
+      "AR_GetPacienteId": {
+        "position": {
+          "x": 428,
+          "y": -547.2
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [],
+        "countryCodePrefix": "+1"
+      },
+      "AR_CheckStatusRetorno": {
+        "position": {
+          "x": 1094.4,
+          "y": -495.2
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "c0742bb8-acbc-47ee-adb6-ea4382edd81e",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "FOUND"
+          },
+          {
+            "id": "9f3abc38-9815-47cd-97e1-718bb03daea9",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "NOT_FOUND"
+          }
+        ]
+      },
+      "AR_Msg_FalhaTecnica": {
+        "position": {
+          "x": 892.8,
+          "y": 84
+        },
+        "isFriendlyName": true
+      },
+      "AR_SetPacienteId": {
+        "position": {
+          "x": 642.4,
+          "y": -564
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "PacienteId": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "PacienteId"
+        ]
+      },
+      "AR_InvokeConsultaExame": {
+        "position": {
+          "x": 859.2,
+          "y": -553.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "AR_LF_ConsultaExame"
+          },
+          "LambdaInvocationAttributes": {
+            "PacienteId": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "PacienteId": true
+        }
+      },
+      "AR_SetLogging": {
+        "position": {
+          "x": 215.2,
+          "y": -544
+        },
+        "isFriendlyName": true
+      },
+      "AR_SetVoice": {
+        "position": {
+          "x": -39.2,
+          "y": -537.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "pt-BR"
+          }
+        },
+        "overrideConsoleVoice": true
+      }
+    },
+    "Annotations": [],
+    "name": "AR_CF_Consulta_Serverless",
+    "description": "Fluxo transacional de voz para consulta de exames integrado com Lambda e DynamoDB",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Olá, $.External.nome_paciente. Localizamos seu exame de $.External.tipo_exame realizado em $.External.data_exame. O laudo consta como: $.External.status_laudo. O Complexo Hospitalar Ares agradece a sua ligação."
+      },
+      "Identifier": "AR_Msg_LaudoDisponivel",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+        "Errors": [
+          {
+            "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Não localizamos nenhum exame cadastrado para este identificador. Por favor, confirme os dados com a nossa equipe de atendimento."
+      },
+      "Identifier": "AR_Msg_NaoLocalizado.",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+        "Errors": [
+          {
+            "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "aad82cb7-0757-4bc5-8bfe-2d21454c40ef",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+        "Errors": [
+          {
+            "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/queue/c2c18098-b4b9-43e8-8371-c4a7181bfc9c"
+      },
+      "Identifier": "ecdd6825-203c-4efc-bed5-c1fe1633ac3f",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "aad82cb7-0757-4bc5-8bfe-2d21454c40ef",
+        "Errors": [
+          {
+            "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Não foi possível concluir automaticamente a consulta do seu exame. Vamos transferir sua chamada para um de nossos atendentes."
+      },
+      "Identifier": "AR_Msg_StatusInesperado",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "ecdd6825-203c-4efc-bed5-c1fe1633ac3f",
+        "Errors": [
+          {
+            "NextAction": "0f611cb7-f4a6-44ac-993b-27da7ff0df06",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Bem-vindo ao autosserviço do Complexo Hospitalar Ares. Por favor, digite os 4 números do identificador do seu exame no teclado do seu telefone.",
+        "DTMFConfiguration": {
+          "DisableCancelKey": "False",
+          "InterdigitTimeLimitSeconds": "5"
+        },
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Identifier": "AR_GetPacienteId",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "AR_SetPacienteId",
+        "Errors": [
+          {
+            "NextAction": "AR_Msg_FalhaTecnica",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.External.status"
+      },
+      "Identifier": "AR_CheckStatusRetorno",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "AR_Msg_StatusInesperado",
+        "Conditions": [
+          {
+            "NextAction": "AR_Msg_LaudoDisponivel",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "FOUND"
+              ]
+            }
+          },
+          {
+            "NextAction": "AR_Msg_NaoLocalizado.",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "NOT_FOUND"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "AR_Msg_StatusInesperado",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Nosso sistema de consulta automatizada está temporariamente indisponível. Vamos transferir sua chamada para um de nossos atendentes."
+      },
+      "Identifier": "AR_Msg_FalhaTecnica",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "ecdd6825-203c-4efc-bed5-c1fe1633ac3f",
+        "Errors": [
+          {
+            "NextAction": "aad82cb7-0757-4bc5-8bfe-2d21454c40ef",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "PacienteId": "$.StoredCustomerInput"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "AR_SetPacienteId",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "AR_InvokeConsultaExame",
+        "Errors": [
+          {
+            "NextAction": "AR_Msg_FalhaTecnica",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:685820429962:function:AR_LF_ConsultaExame",
+        "InvocationTimeLimitSeconds": "3",
+        "InvocationType": "SYNCHRONOUS",
+        "LambdaInvocationAttributes": {
+          "PacienteId": "$.Attributes.PacienteId"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "AR_InvokeConsultaExame",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "AR_CheckStatusRetorno",
+        "Errors": [
+          {
+            "NextAction": "AR_Msg_FalhaTecnica",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "AR_SetLogging",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "AR_GetPacienteId"
+      }
+    },
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Vitoria",
+        "TextToSpeechEngine": "Neural",
+        "TextToSpeechStyle": "None"
+      },
+      "Identifier": "AR_SetVoice",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "AR_SetLogging",
+        "Errors": [
+          {
+            "NextAction": "AR_SetLogging",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
