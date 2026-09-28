@@ -90,8 +90,8 @@ A segunda fase amplia o Ecossistema Ares para além dos recursos nativos do Cont
 
 | Projeto                                     | Nível        | Escopo Técnico Principal                                                   | Status                 |
 | ------------------------------------------- | ------------ | -------------------------------------------------------------------------- | ---------------------- |
-| 🔜 Projeto 7 — Ares Serverless              | Avançado     | Amazon Connect, AWS Lambda, DynamoDB, IAM, validação e tratamento de erros | **Em desenvolvimento** |
-| 🔜 Projeto 8 — Ares Conversational          | Avançado     | Amazon Connect, Amazon Lex, Lambda, DynamoDB/API e NLU                     | **Planejado**          |
+| 🔜 Projeto 7 — Ares Serverless              | Avançado     | Amazon Connect, AWS Lambda, DynamoDB, IAM, validação e tratamento de erros | **Concluído**|
+| 🔜 Projeto 8 — Ares Conversational          | Avançado     | Amazon Connect, Amazon Lex, Lambda, DynamoDB/API e NLU                     | **Em desenvolvimento**          |
 | 🔜 Projeto 9 — Ares API & Integrations      | Avançado     | Lambda, APIs REST, JSON, autenticação, timeout, retry e sistemas externos  | **Planejado**          |
 | 🔜 Projeto 10 — Ares CTI & CRM Architecture | Profissional | CTI, CRM, contexto de atendimento, Screen Pop e arquitetura de integração  | **Planejado**          |
 
