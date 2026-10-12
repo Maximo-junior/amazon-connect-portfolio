@@ -1,0 +1,608 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "7aa511ef-a3bd-45ff-ad03-01de5be8e74e",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -441.6,
+      "y": -89.6
+    },
+    "ActionMetadata": {
+      "AR_SetVoice": {
+        "position": {
+          "x": -121.6,
+          "y": -96.8
+        },
+        "isFriendlyName": true,
+        "children": [
+          "AR_SetVoice-IMxEtQAr52"
+        ],
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "pt-BR"
+          }
+        },
+        "overrideConsoleVoice": true,
+        "fragments": {
+          "SetContactData": "AR_SetVoice-IMxEtQAr52"
+        },
+        "overrideLanguageAttribute": true
+      },
+      "AR_SetVoice-IMxEtQAr52": {
+        "position": {
+          "x": -121.6,
+          "y": -96.8
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      },
+      "AR_GetPacienteId_DTMF": {
+        "position": {
+          "x": 387.2,
+          "y": -162.4
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [],
+        "countryCodePrefix": "+1"
+      },
+      "AR_PlayAgendamento": {
+        "position": {
+          "x": 373.6,
+          "y": 32
+        },
+        "isFriendlyName": true
+      },
+      "AR_PlayCancelamento": {
+        "position": {
+          "x": 379.2,
+          "y": 221.6
+        },
+        "isFriendlyName": true
+      },
+      "AR_PlayFinanceiro": {
+        "position": {
+          "x": 379.2,
+          "y": 412.8
+        },
+        "isFriendlyName": true
+      },
+      "AR_SetQueue_Basic": {
+        "position": {
+          "x": 620,
+          "y": 801.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "QueueId": {
+            "displayName": "BasicQueue"
+          }
+        },
+        "queue": {
+          "text": "BasicQueue"
+        }
+      },
+      "AR_TransferToQueue": {
+        "position": {
+          "x": 1128.8,
+          "y": 756
+        },
+        "isFriendlyName": true
+      },
+      "50a03948-9acb-46e2-8c65-15f2bbe935e0": {
+        "position": {
+          "x": 1382.4,
+          "y": 831.2
+        }
+      },
+      "7aa511ef-a3bd-45ff-ad03-01de5be8e74e": {
+        "position": {
+          "x": -336,
+          "y": -90.4
+        }
+      },
+      "be904d11-0755-4545-896f-920440c1e871": {
+        "position": {
+          "x": -108,
+          "y": 138.4
+        }
+      },
+      "AR_GetCustomerInput_Lex": {
+        "position": {
+          "x": 105.6,
+          "y": -96
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "TestBotAlias",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "AR_Lex_AtendimentoAres"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "AR_Lex_AtendimentoAres",
+        "lexV2BotAliasName": "TestBotAlias",
+        "conditionMetadata": [
+          {
+            "id": "87ca0437-7955-4f98-85e9-73dc383e0084",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ConsultarExame"
+          },
+          {
+            "id": "62ed69f1-84a7-469c-9534-3b1121ba011c",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ConsultarAgendamento"
+          },
+          {
+            "id": "69496f8f-8a3a-4b82-a69d-43f0cde33714",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CancelarAgendamento"
+          },
+          {
+            "id": "281f7404-0bb4-4730-aa09-a7fc284adb05",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ConsultarFinanceiro"
+          },
+          {
+            "id": "7b074862-2f31-41e9-88e5-50a5fb877916",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "FalarComAtendente"
+          }
+        ]
+      },
+      "AR_SetPacienteId": {
+        "position": {
+          "x": 660.8,
+          "y": -174.4
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "Attributes": {
+            "PacienteId": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "PacienteId"
+        ]
+      },
+      "0da1ef45-ddbb-499a-9c4f-7d4acb27751a": {
+        "position": {
+          "x": 1380,
+          "y": 145.6
+        }
+      },
+      "AR_PlayLaudoExame": {
+        "position": {
+          "x": 1365.6,
+          "y": -194.4
+        },
+        "isFriendlyName": true
+      },
+      "AR_PlayFallback": {
+        "position": {
+          "x": 342.4,
+          "y": 812.8
+        },
+        "isFriendlyName": true
+      },
+      "AR_InvokeConsultaExame": {
+        "position": {
+          "x": 899.2,
+          "y": -179.2
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "AR_LF_ConsultaExame"
+          },
+          "LambdaInvocationAttributes": {
+            "PacienteId": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "PacienteId": true
+        }
+      },
+      "AR_CheckLaudoValido": {
+        "position": {
+          "x": 1130.4,
+          "y": -201.6
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "bf834fe5-de1b-4d44-bbe0-006fe4e89cd6",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "SUCCESS"
+          }
+        ]
+      }
+    },
+    "Annotations": [],
+    "name": "AR_CF_Conversational",
+    "description": "Fluxo conversacional inteligente com NLU Amazon Lex V2 e backend serverless da Ares Saúde.",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Vitoria",
+        "TextToSpeechEngine": "Neural",
+        "TextToSpeechStyle": "None"
+      },
+      "Identifier": "AR_SetVoice",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "AR_SetVoice-IMxEtQAr52",
+        "Errors": [
+          {
+            "NextAction": "be904d11-0755-4545-896f-920440c1e871",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LanguageCode": "pt-BR"
+      },
+      "Identifier": "AR_SetVoice-IMxEtQAr52",
+      "Type": "UpdateContactData",
+      "Transitions": {
+        "NextAction": "AR_GetCustomerInput_Lex",
+        "Errors": [
+          {
+            "NextAction": "be904d11-0755-4545-896f-920440c1e871",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Por favor, digite os 4 números do seu protocolo de exame.",
+        "DTMFConfiguration": {
+          "DisableCancelKey": "False",
+          "InterdigitTimeLimitSeconds": "5"
+        },
+        "InputValidation": {
+          "CustomValidation": {
+            "MaximumLength": "4"
+          }
+        }
+      },
+      "Identifier": "AR_GetPacienteId_DTMF",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "AR_SetPacienteId",
+        "Errors": [
+          {
+            "NextAction": "AR_PlayFallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Para consultas de agendamento, informamos que o seu próximo retorno ambulatorial está confirmado para a próxima quinta-feira às 14 horas no Complexo Ares."
+      },
+      "Identifier": "AR_PlayAgendamento",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "0da1ef45-ddbb-499a-9c4f-7d4acb27751a",
+        "Errors": [
+          {
+            "NextAction": "0da1ef45-ddbb-499a-9c4f-7d4acb27751a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Entendemos sua solicitação. O seu pedido de cancelamento de consulta ou exame foi registrado com sucesso em nosso sistema hospitalar."
+      },
+      "Identifier": "AR_PlayCancelamento",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "0da1ef45-ddbb-499a-9c4f-7d4acb27751a",
+        "Errors": [
+          {
+            "NextAction": "0da1ef45-ddbb-499a-9c4f-7d4acb27751a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Para assuntos financeiros, emissão de faturas e segunda via de boletos, encaminhamos as orientações de pagamento para o seu telefone de cadastro via SMS."
+      },
+      "Identifier": "AR_PlayFinanceiro",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "50a03948-9acb-46e2-8c65-15f2bbe935e0",
+        "Errors": [
+          {
+            "NextAction": "50a03948-9acb-46e2-8c65-15f2bbe935e0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:685820429962:instance/05069547-c324-42a2-af86-e0a5a23e8dee/queue/d1465955-41be-4a62-9e57-03884a925915"
+      },
+      "Identifier": "AR_SetQueue_Basic",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "AR_TransferToQueue",
+        "Errors": [
+          {
+            "NextAction": "50a03948-9acb-46e2-8c65-15f2bbe935e0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "AR_TransferToQueue",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "50a03948-9acb-46e2-8c65-15f2bbe935e0",
+        "Errors": [
+          {
+            "NextAction": "50a03948-9acb-46e2-8c65-15f2bbe935e0",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "50a03948-9acb-46e2-8c65-15f2bbe935e0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "50a03948-9acb-46e2-8c65-15f2bbe935e0",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "7aa511ef-a3bd-45ff-ad03-01de5be8e74e",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "AR_SetVoice"
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "be904d11-0755-4545-896f-920440c1e871",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "Olá! Bem-vindo ao Complexo Hospitalar Ares. Diga como podemos ajudar você hoje.",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws:lex:us-east-1:685820429962:bot-alias/PGBYHB6K6V/TSTALIASID"
+        }
+      },
+      "Identifier": "AR_GetCustomerInput_Lex",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "AR_PlayFallback",
+        "Conditions": [
+          {
+            "NextAction": "AR_GetPacienteId_DTMF",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ConsultarExame"
+              ]
+            }
+          },
+          {
+            "NextAction": "AR_PlayAgendamento",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ConsultarAgendamento"
+              ]
+            }
+          },
+          {
+            "NextAction": "AR_PlayCancelamento",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "CancelarAgendamento"
+              ]
+            }
+          },
+          {
+            "NextAction": "AR_PlayFinanceiro",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ConsultarFinanceiro"
+              ]
+            }
+          },
+          {
+            "NextAction": "AR_SetQueue_Basic",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "FalarComAtendente"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "AR_PlayFallback",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "AR_PlayFallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "PacienteId": "$.StoredCustomerInput"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "AR_SetPacienteId",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "AR_InvokeConsultaExame",
+        "Errors": [
+          {
+            "NextAction": "AR_PlayFallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "0da1ef45-ddbb-499a-9c4f-7d4acb27751a",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Olá, $.External.nome_paciente. Localizamos seu exame de $.External.tipo_exame. O laudo consta como: $.External.status_laudo. O Complexo Hospitalar Ares agradece seu contato. Tenha um excelente dia."
+      },
+      "Identifier": "AR_PlayLaudoExame",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "0da1ef45-ddbb-499a-9c4f-7d4acb27751a",
+        "Errors": [
+          {
+            "NextAction": "0da1ef45-ddbb-499a-9c4f-7d4acb27751a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Não conseguimos identificar sua solicitação ou nosso sistema está temporariamente indisponível. Vamos transferir você para nossa equipe."
+      },
+      "Identifier": "AR_PlayFallback",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "AR_SetQueue_Basic",
+        "Errors": [
+          {
+            "NextAction": "AR_SetQueue_Basic",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:685820429962:function:AR_LF_ConsultaExame",
+        "InvocationTimeLimitSeconds": "8",
+        "InvocationType": "SYNCHRONOUS",
+        "LambdaInvocationAttributes": {
+          "PacienteId": "$.Attributes.PacienteId"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "AR_InvokeConsultaExame",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "AR_CheckLaudoValido",
+        "Errors": [
+          {
+            "NextAction": "AR_PlayFallback",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.External.status"
+      },
+      "Identifier": "AR_CheckLaudoValido",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "AR_PlayFallback",
+        "Conditions": [
+          {
+            "NextAction": "AR_PlayLaudoExame",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "SUCCESS"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "AR_PlayFallback",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    }
+  ]
+}
