@@ -1,0 +1,118 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "11111111-1111-1111-1111-111111111111",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "22222222-2222-2222-2222-222222222222": {
+        "position": {
+          "x": 480,
+          "y": 40
+        }
+      },
+      "11111111-1111-1111-1111-111111111111": {
+        "position": {
+          "x": 220,
+          "y": 40
+        },
+        "parameters": {
+          "ViewResource": {
+            "Id": {
+              "displayName": "AR_VW_Ficha_Paciente"
+            }
+          },
+          "InvocationTimeLimitSeconds": {
+            "unit": 60
+          },
+          "ViewData": {
+            "convenio": {
+              "useDynamic": true
+            },
+            "intencao": {
+              "useDynamic": true
+            },
+            "nome_paciente": {
+              "useDynamic": true
+            },
+            "paciente_id": {
+              "useDynamic": true
+            },
+            "pendencia_financeira": {
+              "useDynamic": true
+            },
+            "resumo_ia": {
+              "useDynamic": true
+            },
+            "ultimo_exame": {
+              "useDynamic": true
+            },
+            "urgencia": {
+              "useDynamic": true
+            },
+            "Header_1": {
+              "useJson": true
+            }
+          }
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "AR_FL_Guia_Atendente",
+    "description": "Exibe a ficha de triagem do paciente no Agent Workspace",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "22222222-2222-2222-2222-222222222222",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "ViewResource": {
+          "Id": "arn:aws:connect:us-east-1:723799951581:instance/197bf6a0-b3da-4325-adb6-4c9ec90c56e5/view/0c957fc5-fade-409b-acf2-04945aeeaa72:$LATEST"
+        },
+        "InvocationTimeLimitSeconds": "300",
+        "ViewData": {
+          "convenio": "$.Attributes.convenio",
+          "intencao": "$.Attributes.intencao",
+          "nome_paciente": "$.Attributes.nome_paciente",
+          "paciente_id": "$.Attributes.paciente_id",
+          "pendencia_financeira": "$.Attributes.pendencia_financeira",
+          "resumo_ia": "$.Attributes.resumo_ia",
+          "ultimo_exame": "$.Attributes.ultimo_exame",
+          "urgencia": "$.Attributes.urgencia",
+          "Header_1": {
+            "header": "Ficha de Triagem — Ares Saúde",
+            "description": "Dados do Paciente e Classificação IA"
+          }
+        }
+      },
+      "Identifier": "11111111-1111-1111-1111-111111111111",
+      "Type": "ShowView",
+      "Transitions": {
+        "NextAction": "22222222-2222-2222-2222-222222222222",
+        "Errors": [
+          {
+            "NextAction": "22222222-2222-2222-2222-222222222222",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "22222222-2222-2222-2222-222222222222",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "22222222-2222-2222-2222-222222222222",
+            "ErrorType": "TimeLimitExceeded"
+          }
+        ]
+      }
+    }
+  ]
+}

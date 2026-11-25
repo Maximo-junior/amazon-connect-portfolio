@@ -1,0 +1,623 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "8e3d0b30-46c6-4f4d-adce-767cbd557aef",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -864.8,
+      "y": -246.4
+    },
+    "ActionMetadata": {
+      "d65cbf12-78c6-4d46-887b-a70be56daa59": {
+        "position": {
+          "x": -531.2,
+          "y": -257.6
+        },
+        "children": [
+          "055c7ef8-f1f2-4284-b1b6-eb2af046ada8"
+        ],
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "pt-BR"
+          }
+        },
+        "overrideConsoleVoice": true,
+        "fragments": {
+          "SetContactData": "055c7ef8-f1f2-4284-b1b6-eb2af046ada8"
+        },
+        "overrideLanguageAttribute": true
+      },
+      "055c7ef8-f1f2-4284-b1b6-eb2af046ada8": {
+        "position": {
+          "x": -531.2,
+          "y": -257.6
+        },
+        "dynamicParams": []
+      },
+      "8e3d0b30-46c6-4f4d-adce-767cbd557aef": {
+        "position": {
+          "x": -751.2,
+          "y": -274.4
+        }
+      },
+      "a0d47e75-97b7-4ebf-acaf-9dbf403c02a8": {
+        "position": {
+          "x": -310.4,
+          "y": -161.6
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "TestBotAlias",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "AR_BOT_Recepcao"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "AR_BOT_Recepcao",
+        "lexV2BotAliasName": "TestBotAlias",
+        "conditionMetadata": [
+          {
+            "id": "6b4ce795-a674-4fff-8de8-9cd3e06166b6",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "IntencaoPadrao"
+          }
+        ]
+      },
+      "2aefc166-b755-4b99-a129-ce9d6efc0bac": {
+        "position": {
+          "x": -64,
+          "y": -147.2
+        },
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "AR_LF_Paciente_Identificar"
+          },
+          "LambdaInvocationAttributes": {
+            "paciente_id": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "paciente_id": true
+        }
+      },
+      "b1a2c3d4-2222-4444-8888-000000000003": {
+        "position": {
+          "x": 160,
+          "y": 140
+        }
+      },
+      "b1a2c3d4-4444-4444-8888-000000000005": {
+        "position": {
+          "x": 1891.2,
+          "y": -209.6
+        }
+      },
+      "ad2b266f-7c97-43a3-a798-b4905e064058": {
+        "position": {
+          "x": 900,
+          "y": -142.4
+        },
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "AR_LF_Recepcao_Classificar"
+          },
+          "LambdaInvocationAttributes": {
+            "mensagem": {
+              "useDynamic": true
+            },
+            "nome_paciente": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "mensagem": true,
+          "nome_paciente": true
+        }
+      },
+      "5c848e3d-0215-4a31-a1bc-46d75c8e748a": {
+        "position": {
+          "x": 1160,
+          "y": -360
+        },
+        "parameters": {
+          "Attributes": {
+            "resumo_ia": {
+              "useDynamic": true
+            },
+            "urgencia": {
+              "useDynamic": true
+            },
+            "intencao": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "resumo_ia",
+          "urgencia",
+          "intencao"
+        ]
+      },
+      "5805a997-e232-4a03-be08-133de4ea2e1a": {
+        "position": {
+          "x": 1969.6,
+          "y": 208.8
+        }
+      },
+      "1770b334-88cb-46b8-a7d9-04b72db44a68": {
+        "position": {
+          "x": 1160,
+          "y": -151.2
+        }
+      },
+      "44ea6e99-5610-4895-80cb-66ecbbbd2c6e": {
+        "position": {
+          "x": 1649.6,
+          "y": -162.4
+        }
+      },
+      "e76b57a7-a85a-46aa-9a45-74e2e78813ec": {
+        "position": {
+          "x": 1400,
+          "y": -156.8
+        },
+        "parameters": {
+          "QueueId": {
+            "useDynamic": true
+          }
+        },
+        "useDynamic": true
+      },
+      "9a0de28d-4914-4055-9939-4a6ee71fc78f": {
+        "position": {
+          "x": 1554.4,
+          "y": -432
+        },
+        "parameters": {
+          "EventHooks": {
+            "DefaultAgentUI": {
+              "displayName": "AR_FL_Guia_Atendente",
+              "useSetEventHook": true
+            }
+          }
+        }
+      },
+      "b1a2c3d4-1111-4444-8888-000000000001": {
+        "position": {
+          "x": 160,
+          "y": -147.2
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "13ea2444-1521-4c9d-be52-0557e4161f60",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "true"
+          }
+        ]
+      },
+      "ec637ca7-fb3d-4cfb-902b-992e1df08d07": {
+        "position": {
+          "x": 640,
+          "y": -142.4
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "TestBotAlias",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "AR_BOT_Recepcao"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "AR_BOT_Recepcao",
+        "lexV2BotAliasName": "TestBotAlias",
+        "conditionMetadata": [
+          {
+            "id": "4e10f4a6-9608-4f0b-a8ab-be3db5e34896",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "IntencaoPadrao"
+          }
+        ]
+      },
+      "b1a2c3d4-3333-4444-8888-000000000004": {
+        "position": {
+          "x": 398.4,
+          "y": -148.8
+        },
+        "parameters": {
+          "Attributes": {
+            "nome_paciente": {
+              "useDynamic": true
+            },
+            "paciente_id": {
+              "useDynamic": true
+            },
+            "convenio": {
+              "useDynamic": true
+            },
+            "ultimo_exame": {
+              "useDynamic": true
+            },
+            "pendencia_financeira": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "nome_paciente",
+          "paciente_id",
+          "convenio",
+          "ultimo_exame",
+          "pendencia_financeira"
+        ]
+      }
+    },
+    "Annotations": [],
+    "name": "Ares_Fluxo_Recepcao_Digital",
+    "description": "Fluxo de recepcao digital com validacao em loop do paciente, Lex V2, DynamoDB, Bedrock Guardrails e roteamento dinamico",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Vitoria",
+        "TextToSpeechEngine": "Neural",
+        "TextToSpeechStyle": "None"
+      },
+      "Identifier": "d65cbf12-78c6-4d46-887b-a70be56daa59",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "055c7ef8-f1f2-4284-b1b6-eb2af046ada8",
+        "Errors": [
+          {
+            "NextAction": "a0d47e75-97b7-4ebf-acaf-9dbf403c02a8",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LanguageCode": "pt-BR"
+      },
+      "Identifier": "055c7ef8-f1f2-4284-b1b6-eb2af046ada8",
+      "Type": "UpdateContactData",
+      "Transitions": {
+        "NextAction": "a0d47e75-97b7-4ebf-acaf-9dbf403c02a8",
+        "Errors": [
+          {
+            "NextAction": "a0d47e75-97b7-4ebf-acaf-9dbf403c02a8",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "8e3d0b30-46c6-4f4d-adce-767cbd557aef",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "d65cbf12-78c6-4d46-887b-a70be56daa59"
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Olá! Bem-vindo à Ares Saúde. Por favor, informe seu número de paciente (ex: 1001):",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws:lex:us-east-1:723799951581:bot-alias/VZTXB8LARF/TSTALIASID"
+        }
+      },
+      "Identifier": "a0d47e75-97b7-4ebf-acaf-9dbf403c02a8",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "b1a2c3d4-2222-4444-8888-000000000003",
+        "Conditions": [
+          {
+            "NextAction": "2aefc166-b755-4b99-a129-ce9d6efc0bac",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "IntencaoPadrao"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "2aefc166-b755-4b99-a129-ce9d6efc0bac",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "b1a2c3d4-2222-4444-8888-000000000003",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:723799951581:function:AR_LF_Paciente_Identificar",
+        "InvocationTimeLimitSeconds": "8",
+        "InvocationType": "SYNCHRONOUS",
+        "LambdaInvocationAttributes": {
+          "paciente_id": "$.Lex.SessionAttributes.texto_digitado"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "2aefc166-b755-4b99-a129-ce9d6efc0bac",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "b1a2c3d4-1111-4444-8888-000000000001",
+        "Errors": [
+          {
+            "NextAction": "b1a2c3d4-2222-4444-8888-000000000003",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Número de paciente não encontrado ou inválido. Por favor, verifique e tente novamente."
+      },
+      "Identifier": "b1a2c3d4-2222-4444-8888-000000000003",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "a0d47e75-97b7-4ebf-acaf-9dbf403c02a8",
+        "Errors": [
+          {
+            "NextAction": "a0d47e75-97b7-4ebf-acaf-9dbf403c02a8",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "No momento todos os nossos atendentes estão ocupados ou fora do horário de atendimento. Por favor, tente novamente em instantes."
+      },
+      "Identifier": "b1a2c3d4-4444-4444-8888-000000000005",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+        "Errors": [
+          {
+            "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:723799951581:function:AR_LF_Recepcao_Classificar",
+        "InvocationTimeLimitSeconds": "8",
+        "InvocationType": "SYNCHRONOUS",
+        "LambdaInvocationAttributes": {
+          "mensagem": "$.Lex.SessionAttributes.texto_digitado",
+          "nome_paciente": "$.Attributes.nome_paciente"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "ad2b266f-7c97-43a3-a798-b4905e064058",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "5c848e3d-0215-4a31-a1bc-46d75c8e748a",
+        "Errors": [
+          {
+            "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "resumo_ia": "$.External.resumo_ia",
+          "urgencia": "$.External.urgencia",
+          "intencao": "$.External.intencao"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "5c848e3d-0215-4a31-a1bc-46d75c8e748a",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "1770b334-88cb-46b8-a7d9-04b72db44a68",
+        "Errors": [
+          {
+            "NextAction": "1770b334-88cb-46b8-a7d9-04b72db44a68",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "5805a997-e232-4a03-be08-133de4ea2e1a",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "$.External.resposta_bot"
+      },
+      "Identifier": "1770b334-88cb-46b8-a7d9-04b72db44a68",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "e76b57a7-a85a-46aa-9a45-74e2e78813ec",
+        "Errors": [
+          {
+            "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "44ea6e99-5610-4895-80cb-66ecbbbd2c6e",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+        "Errors": [
+          {
+            "NextAction": "b1a2c3d4-4444-4444-8888-000000000005",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "$.External.fila_arn"
+      },
+      "Identifier": "e76b57a7-a85a-46aa-9a45-74e2e78813ec",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "9a0de28d-4914-4055-9939-4a6ee71fc78f",
+        "Errors": [
+          {
+            "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "DefaultAgentUI": "arn:aws:connect:us-east-1:723799951581:instance/197bf6a0-b3da-4325-adb6-4c9ec90c56e5/contact-flow/6959131c-03a6-4982-a6c4-6d4263a67db6"
+        }
+      },
+      "Identifier": "9a0de28d-4914-4055-9939-4a6ee71fc78f",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "44ea6e99-5610-4895-80cb-66ecbbbd2c6e",
+        "Errors": [
+          {
+            "NextAction": "44ea6e99-5610-4895-80cb-66ecbbbd2c6e",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.External.encontrado"
+      },
+      "Identifier": "b1a2c3d4-1111-4444-8888-000000000001",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "b1a2c3d4-2222-4444-8888-000000000003",
+        "Conditions": [
+          {
+            "NextAction": "b1a2c3d4-3333-4444-8888-000000000004",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "true"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "b1a2c3d4-2222-4444-8888-000000000003",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Olá $.Attributes.nome_paciente! Como posso ajudar você hoje?",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws:lex:us-east-1:723799951581:bot-alias/VZTXB8LARF/TSTALIASID"
+        }
+      },
+      "Identifier": "ec637ca7-fb3d-4cfb-902b-992e1df08d07",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+        "Conditions": [
+          {
+            "NextAction": "ad2b266f-7c97-43a3-a798-b4905e064058",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "IntencaoPadrao"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "ad2b266f-7c97-43a3-a798-b4905e064058",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "5805a997-e232-4a03-be08-133de4ea2e1a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "nome_paciente": "$.External.nome_paciente",
+          "paciente_id": "$.External.paciente_id",
+          "convenio": "$.External.convenio",
+          "ultimo_exame": "$.External.ultimo_exame",
+          "pendencia_financeira": "$.External.pendencia_financeira"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "b1a2c3d4-3333-4444-8888-000000000004",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "ec637ca7-fb3d-4cfb-902b-992e1df08d07",
+        "Errors": [
+          {
+            "NextAction": "ec637ca7-fb3d-4cfb-902b-992e1df08d07",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
